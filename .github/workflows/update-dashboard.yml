@@ -32,7 +32,7 @@ jobs:
       - name: Generate updated dashboard
         env:
           MONGO_URL: ${{ secrets.MONGO_URL }}
-          DB_NAME: ${{ secrets.DB_NAME || 'workya_db' }}
+          DB_NAME: workya_db
           DASHBOARD_PATH: index.html
         run: python scripts/generate_dashboard.py
 
