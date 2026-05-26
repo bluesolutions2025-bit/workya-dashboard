@@ -200,12 +200,11 @@ def update_html(wd, ed, nsd, nid):
     arrays = {"WD": wd, "ED": ed, "NSD": nsd, "NID": nid}
     for name, data in arrays.items():
         json_str = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-        pattern = rf"const {name}=\[.*?\];"
+        pattern = rf"const {name}=\[.*\];"
         replacement = f"const {name}={json_str};"
-        new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-        if new_content == content:
+        if not re.search(pattern, content):
             print(f"WARNING: pattern for const {name}=[...] not found", file=sys.stderr)
-        content = new_content
+        content = re.sub(pattern, replacement, content)
 
     with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
         f.write(content)
