@@ -206,11 +206,19 @@ def update_html(wd, ed, nsd, nid):
             print(f"WARNING: pattern for const {name}=[...] not found", file=sys.stderr)
         content = re.sub(pattern, replacement, content)
 
+    now = datetime.now(timezone.utc)
+    last_updated = now.strftime("%d/%m/%Y %H:%M")
+    pattern = r'const LAST_UPDATED="[^"]*";'
+    replacement = f'const LAST_UPDATED="{last_updated}";'
+    if not re.search(pattern, content):
+        print("WARNING: pattern for LAST_UPDATED not found", file=sys.stderr)
+    content = re.sub(pattern, replacement, content)
+
     with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
         f.write(content)
 
     print(
-        f"Dashboard updated — WD:{len(wd)}  ED:{len(ed)}  NSD:{len(nsd)}  NID:{len(nid)}"
+        f"Dashboard updated — WD:{len(wd)}  ED:{len(ed)}  NSD:{len(nsd)}  NID:{len(nid)}  Updated:{last_updated}"
     )
 
 
