@@ -236,14 +236,14 @@ td{padding:9px 13px;font-size:11px;vertical-align:middle}
 <div id="tab-overview" class="panel on">
   <div class="info">📂 Archivo autónomo — ábrelo en cualquier dispositivo sin internet ni cuentas.</div>
   <div class="kpis">
-    <div class="kpi kb"><div class="kl">Total Aplicantes</div><div class="kv">395</div><div class="ks">Dic 2025 – May 2026</div></div>
-    <div class="kpi kg"><div class="kl">Trabajando</div><div class="kv">186</div><div class="ks"><strong>47.1%</strong> tasa colocación</div></div>
-    <div class="kpi kp"><div class="kl">Enviados</div><div class="kv">46</div><div class="ks">Pendientes confirmación</div></div>
-    <div class="kpi ka"><div class="kl">No Ingresaron</div><div class="kv">57</div><div class="ks"><strong>23.5%</strong> caída post-envío</div></div>
-    <div class="kpi kc"><div class="kl">No Seleccionados</div><div class="kv">61</div><div class="ks"><strong>15.4%</strong> del total</div></div>
+    <div class="kpi kb"><div class="kl">Total Aplicantes</div><div class="kv" id="kpiTotal">—</div><div class="ks">Dic 2025 – May 2026</div></div>
+    <div class="kpi kg"><div class="kl">Trabajando</div><div class="kv" id="kpiWD">—</div><div class="ks" id="kpiWDks">tasa colocación</div></div>
+    <div class="kpi kp"><div class="kl">Enviados</div><div class="kv" id="kpiED">—</div><div class="ks">Pendientes confirmación</div></div>
+    <div class="kpi ka"><div class="kl">No Ingresaron</div><div class="kv" id="kpiNID">—</div><div class="ks" id="kpiNIDks">caída post-envío</div></div>
+    <div class="kpi kc"><div class="kl">No Seleccionados</div><div class="kv" id="kpiNSD">—</div><div class="ks" id="kpiNSDks">del total</div></div>
   </div>
   <div class="g12">
-    <div class="card"><div class="ct">Pipeline Actual</div><div class="cs">Distribución de 395 candidatos</div><div id="donut"></div></div>
+    <div class="card"><div class="ct">Pipeline Actual</div><div class="cs" id="pipeSubtitle">Cargando...</div><div id="donut"></div></div>
     <div class="card"><div class="ct">Trabajando por Cliente</div><div class="cs">Colocaciones activas confirmadas</div><div class="cr2"><div class="cn2" title="GREATWOLF THE LODGE PA">GREATWOLF THE LODGE PA</div><div class="co2"><div class="ci2" style="width:100%;background:#3b82f622;border:1px solid #3b82f644;color:#3b82f6">37</div></div><div class="cc2">37</div></div>
 <div class="cr2"><div class="cn2" title="OKANA RESORT">OKANA RESORT</div><div class="co2"><div class="ci2" style="width:86%;background:#06b6d422;border:1px solid #06b6d444;color:#06b6d4">32</div></div><div class="cc2">32</div></div>
 <div class="cr2"><div class="cn2" title="WILDERNESS">WILDERNESS</div><div class="co2"><div class="ci2" style="width:78%;background:#10b98122;border:1px solid #10b98144;color:#10b981">29</div></div><div class="cc2">29</div></div>
@@ -709,4 +709,18 @@ function aEP(){const q=document.getElementById('epS').value.toLowerCase(),et=doc
 function clEP(){document.getElementById('epS').value='';['epE','epR','epP'].forEach(i=>document.getElementById(i).selectedIndex=0);aEP()}
 aW();aE();aNS();aNI();aNT();aEP();
 document.getElementById('lu').innerHTML='Actualizado: <strong>'+LAST_UPDATED+'</strong>';
+(function(){
+  const tot=WD.length+ED.length+NSD.length+NID.length+EP.length;
+  if(!tot)return;
+  document.getElementById('kpiTotal').textContent=tot;
+  document.getElementById('kpiWD').textContent=WD.length;
+  document.getElementById('kpiED').textContent=ED.length;
+  document.getElementById('kpiNID').textContent=NID.length;
+  document.getElementById('kpiNSD').textContent=NSD.length;
+  document.getElementById('kpiWDks').innerHTML='<strong>'+(WD.length/tot*100).toFixed(1)+'%</strong> tasa colocación';
+  document.getElementById('kpiNSDks').innerHTML='<strong>'+(NSD.length/tot*100).toFixed(1)+'%</strong> del total';
+  const nidBase=WD.length+NID.length;
+  if(nidBase>0)document.getElementById('kpiNIDks').innerHTML='<strong>'+(NID.length/nidBase*100).toFixed(1)+'%</strong> caída post-envío';
+  document.getElementById('pipeSubtitle').textContent='Distribución de '+tot+' candidatos';
+})();
 </script></body></html>
