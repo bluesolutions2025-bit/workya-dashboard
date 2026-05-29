@@ -12,6 +12,9 @@ Pipeline stage mapping:
   sent          -> ED  (Enviados, pendiente confirmación)
   not_selected  -> NSD (No Seleccionados)
   not_arriving  -> NID (No Ingresó)
+  interview     -> EP  (En Proceso — Entrevista)
+  new           -> EP  (En Proceso — Nuevo)
+  contacting    -> EP  (En Proceso — Contactando)
 """
 
 import json
@@ -40,6 +43,15 @@ STAGE_WORKING = "working"
 STAGE_SENT = "sent"
 STAGE_NOT_SELECTED = "not_selected"
 STAGE_NOT_ARRIVING = "not_arriving"
+STAGE_INTERVIEW = "interview"
+STAGE_NEW = "new"
+STAGE_CONTACTING = "contacting"
+
+STAGE_LABELS = {
+    "interview": "Entrevista",
+    "new": "Nuevo",
+    "contacting": "Contactando",
+}
 
 
 def _fmt_fi(dt):
@@ -150,6 +162,20 @@ def _build_nid(app):
     }
 
 
+def _build_ep(app):
+    stage = app.get("pipeline_stage", "")
+    return {
+        "n": app.get("full_name", ""),
+        "e": STAGE_LABELS.get(stage, stage),
+        "p": app.get("job_title", ""),
+        "r": (app.get("owner_name") or "Sin asignar"),
+        "pa": app.get("country_origin", ""),
+        "f": LEAD_SOURCE_LABELS.get(app.get("lead_source") or "", "Sin fuente"),
+        "fa": _fmt_long(app.get("created_at")),
+        "o": _get_notes(app),
+    }
+
+
 def fetch_arrays():
     client = MongoClient(MONGO_URL, serverSelectionTimeoutMS=30000)
     db = client[DB_NAME]
@@ -172,7 +198,7 @@ def fetch_arrays():
     apps = list(db.applications.find({}, projection))
     client.close()
 
-    wd, ed, nsd, nid = [], [], [], []
+    wd, ed, nsd, nid, ep = [], [], [], [], []
     for app in apps:
         stage = app.get("pipeline_stage") or "new"
         if stage == STAGE_WORKING:
@@ -183,21 +209,24 @@ def fetch_arrays():
             nsd.append(_build_nsd(app))
         elif stage == STAGE_NOT_ARRIVING:
             nid.append(_build_nid(app))
+        elif stage in (STAGE_INTERVIEW, STAGE_NEW, STAGE_CONTACTING):
+            ep.append(_build_ep(app))
 
     # Most recent first
     wd.sort(key=lambda x: x.get("fs", ""), reverse=True)
     ed.sort(key=lambda x: x.get("fe", ""), reverse=True)
     nsd.sort(key=lambda x: x.get("fa", ""), reverse=True)
     nid.sort(key=lambda x: x.get("fe", ""), reverse=True)
+    ep.sort(key=lambda x: x.get("fa", ""), reverse=True)
 
-    return wd, ed, nsd, nid
+    return wd, ed, nsd, nid, ep
 
 
-def update_html(wd, ed, nsd, nid):
+def update_html(wd, ed, nsd, nid, ep):
     with open(DASHBOARD_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    arrays = {"WD": wd, "ED": ed, "NSD": nsd, "NID": nid}
+    arrays = {"WD": wd, "ED": ed, "NSD": nsd, "NID": nid, "EP": ep}
     for name, data in arrays.items():
         json_str = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
         pattern = rf"const {name}=\[.*\];"
@@ -218,10 +247,10 @@ def update_html(wd, ed, nsd, nid):
         f.write(content)
 
     print(
-        f"Dashboard updated — WD:{len(wd)}  ED:{len(ed)}  NSD:{len(nsd)}  NID:{len(nid)}  Updated:{last_updated}"
+        f"Dashboard updated — WD:{len(wd)}  ED:{len(ed)}  NSD:{len(nsd)}  NID:{len(nid)}  EP:{len(ep)}  Updated:{last_updated}"
     )
 
 
 if __name__ == "__main__":
-    wd, ed, nsd, nid = fetch_arrays()
-    update_html(wd, ed, nsd, nid)
+    wd, ed, nsd, nid, ep = fetch_arrays()
+    update_html(wd, ed, nsd, nid, ep)
