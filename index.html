@@ -710,17 +710,21 @@ function clEP(){document.getElementById('epS').value='';['epE','epR','epP'].forE
 aW();aE();aNS();aNI();aNT();aEP();
 document.getElementById('lu').innerHTML='Actualizado: <strong>'+LAST_UPDATED+'</strong>';
 (function(){
-  const tot=WD.length+ED.length+NSD.length+NID.length+EP.length;
-  if(!tot)return;
-  document.getElementById('kpiTotal').textContent=tot;
-  document.getElementById('kpiWD').textContent=WD.length;
-  document.getElementById('kpiED').textContent=ED.length;
-  document.getElementById('kpiNID').textContent=NID.length;
-  document.getElementById('kpiNSD').textContent=NSD.length;
-  document.getElementById('kpiWDks').innerHTML='<strong>'+(WD.length/tot*100).toFixed(1)+'%</strong> tasa colocación';
-  document.getElementById('kpiNSDks').innerHTML='<strong>'+(NSD.length/tot*100).toFixed(1)+'%</strong> del total';
-  const nidBase=WD.length+NID.length;
-  if(nidBase>0)document.getElementById('kpiNIDks').innerHTML='<strong>'+(NID.length/nidBase*100).toFixed(1)+'%</strong> caída post-envío';
-  document.getElementById('pipeSubtitle').textContent='Distribución de '+tot+' candidatos';
+  try{
+    const ep=(typeof EP!=='undefined')?EP:[];
+    const tot=WD.length+ED.length+NSD.length+NID.length+ep.length;
+    document.getElementById('kpiTotal').textContent=tot;
+    document.getElementById('kpiWD').textContent=WD.length;
+    document.getElementById('kpiED').textContent=ED.length;
+    document.getElementById('kpiNID').textContent=NID.length;
+    document.getElementById('kpiNSD').textContent=NSD.length;
+    if(tot>0){
+      document.getElementById('kpiWDks').innerHTML='<strong>'+(WD.length/tot*100).toFixed(1)+'%</strong> tasa colocación';
+      document.getElementById('kpiNSDks').innerHTML='<strong>'+(NSD.length/tot*100).toFixed(1)+'%</strong> del total';
+      const nidBase=WD.length+NID.length;
+      if(nidBase>0)document.getElementById('kpiNIDks').innerHTML='<strong>'+(NID.length/nidBase*100).toFixed(1)+'%</strong> caída post-envío';
+    }
+    document.getElementById('pipeSubtitle').textContent='Distribución de '+tot+' candidatos';
+  }catch(e){}
 })();
 </script></body></html>
