@@ -86,10 +86,17 @@ def _fmt_long(dt):
     return dt.strftime("%Y-%m-%d 00:00:00")
 
 
+def _sanitize(text):
+    """Remove or replace control characters that would break JS string literals."""
+    if not text:
+        return text
+    return " ".join(text.split())
+
+
 def _get_notes(app):
-    notes = (app.get("notes") or "").strip()
+    notes = _sanitize((app.get("notes") or "").strip())
     if not notes:
-        notes = (app.get("deactivation_reason") or "").strip()
+        notes = _sanitize((app.get("deactivation_reason") or "").strip())
     return notes or "Sin observación"
 
 
@@ -229,11 +236,11 @@ def update_html(wd, ed, nsd, nid, ep):
     arrays = {"WD": wd, "ED": ed, "NSD": nsd, "NID": nid, "EP": ep}
     for name, data in arrays.items():
         json_str = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-        pattern = rf"const {name}=\[.*\];"
+        pattern = rf"const {name}=\[.*?\];"
         replacement = f"const {name}={json_str};"
-        if not re.search(pattern, content):
+        if not re.search(pattern, content, re.DOTALL):
             print(f"WARNING: pattern for const {name}=[...] not found", file=sys.stderr)
-        content = re.sub(pattern, replacement, content)
+        content = re.sub(pattern, lambda m, r=replacement: r, content, flags=re.DOTALL)
 
     now = datetime.now(timezone.utc)
     last_updated = now.strftime("%d/%m/%Y %H:%M")
