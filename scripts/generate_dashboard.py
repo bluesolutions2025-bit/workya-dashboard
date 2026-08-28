@@ -85,6 +85,8 @@ _STAGE_LABEL_NTD = {
 
 _DT_MIN = datetime(2020, 1, 1, tzinfo=timezone.utc)
 _DT_MAX = datetime(2030, 1, 1, tzinfo=timezone.utc)
+# Ingresos (started_working_at) capped at today to exclude typos like 2026 vs 2025
+_DT_INGRESOS_MAX = datetime.now(timezone.utc).replace(hour=23, minute=59, second=59)
 
 
 def _parse_dt(val):
@@ -263,8 +265,8 @@ def _build_weekly(apps):
         if (app.get("pipeline_stage") or "") != "working":
             continue
         dt = _parse_dt(app.get("started_working_at"))
-        if not dt:
-            continue
+        if not dt or dt > _DT_INGRESOS_MAX:
+            continue  # skip future dates (likely typos e.g. 2026 entered instead of 2025)
         y, w, _ = dt.isocalendar()
         bucket[(y, w)]["ingresos"] += 1
 
@@ -313,8 +315,8 @@ def _build_monthly(apps):
         if (app.get("pipeline_stage") or "") != "working":
             continue
         dt = _parse_dt(app.get("started_working_at"))
-        if not dt:
-            continue
+        if not dt or dt > _DT_INGRESOS_MAX:
+            continue  # skip future dates (likely typos)
         key = (dt.year, dt.month)
         bucket[key]["ingresos"] += 1
 
