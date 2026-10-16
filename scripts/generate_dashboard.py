@@ -3,7 +3,8 @@
 Fetches all applications from MongoDB Atlas and regenerates the static dashboard HTML.
 
 Required env vars:
-  MONGO_URL       - MongoDB Atlas connection string
+  MONGODB_URI     - MongoDB Atlas connection string (preferred)
+  MONGO_URL       - MongoDB Atlas connection string (legacy alias, accepted if MONGODB_URI not set)
   DB_NAME         - Database name (default: workya_db)
   DASHBOARD_PATH  - Path to index.html (default: index.html)
 
@@ -26,7 +27,15 @@ from datetime import datetime, timedelta, timezone
 
 from pymongo import MongoClient
 
-MONGO_URL = os.environ["MONGO_URL"]
+MONGO_URL = os.environ.get("MONGODB_URI") or os.environ.get("MONGO_URL")
+if not MONGO_URL:
+    print(
+        "ERROR: Se requiere la variable de entorno MONGODB_URI o MONGO_URL.\n"
+        "  → Copiar .env.example a .env y configurar MONGODB_URI.\n"
+        "  → En GitHub Actions: configurar el secreto MONGO_URL en el repositorio.",
+        file=sys.stderr,
+    )
+    sys.exit(1)
 DB_NAME = os.environ.get("DB_NAME", "workya_db")
 DASHBOARD_PATH = os.environ.get("DASHBOARD_PATH", "index.html")
 

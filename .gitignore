@@ -1,0 +1,23 @@
+# Credenciales y configuración local — NUNCA versionar
+.env
+.env.local
+.env.development
+.env.production
+.env.*
+!.env.example
+
+# Secretos
+*.secret
+*.key
+*.pem
+
+# Logs con posible información sensible
+scripts/update.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# macOS
+.DS_Store
