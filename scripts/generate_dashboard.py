@@ -166,6 +166,20 @@ def _get_notes(app):
     return notes or "Sin observación"
 
 
+def _categorize_note(raw_note):
+    """Map free-text notes to a fixed operational category (no PII in output)."""
+    note_l = (raw_note or "").lower()
+    if "banco de talento" in note_l:
+        return "Banco de Talento"
+    if "visa" in note_l:
+        return "Requisito de visa"
+    if "renta" in note_l or "aloj" in note_l or "housing" in note_l:
+        return "Condición de alojamiento"
+    if not raw_note or raw_note == "Sin observación":
+        return "Sin observación"
+    return "Nota operativa"
+
+
 def _get_last_send_date(app):
     history = app.get("sent_to_history") or []
     if history:
@@ -193,7 +207,7 @@ def _get_all_clients(app):
 
 def _build_wd(app):
     return {
-        "n": app.get("full_name", ""),
+        "n": "",
         "c": _get_last_client(app),
         "fi": _fmt_fi(app.get("started_working_at")),
         "fs": _fmt_sort(app.get("started_working_at")),
@@ -206,7 +220,7 @@ def _build_wd(app):
 
 def _build_ed(app):
     return {
-        "n": app.get("full_name", ""),
+        "n": "",
         "c": _get_all_clients(app),
         "fe": _get_last_send_date(app),
         "p": app.get("job_title", ""),
@@ -217,7 +231,7 @@ def _build_ed(app):
 
 def _build_nsd(app):
     return {
-        "n": app.get("full_name", ""),
+        "n": "",
         "pa": app.get("country_origin", ""),
         "p": app.get("job_title", ""),
         "r": (app.get("owner_name") or "Sin asignar"),
@@ -228,7 +242,7 @@ def _build_nsd(app):
 
 def _build_nid(app):
     return {
-        "n": app.get("full_name", ""),
+        "n": "",
         "c": _get_all_clients(app),
         "fe": _get_last_send_date(app),
         "p": app.get("job_title", ""),
@@ -240,7 +254,7 @@ def _build_nid(app):
 def _build_ep(app):
     stage = app.get("pipeline_stage", "")
     return {
-        "n": app.get("full_name", ""),
+        "n": "",
         "e": STAGE_LABELS.get(stage, stage),
         "p": app.get("job_title", ""),
         "r": (app.get("owner_name") or "Sin asignar"),
@@ -402,11 +416,11 @@ def _build_ntd(apps):
             else "N/A"
         )
         result.append({
-            "n": _sanitize(app.get("full_name") or ""),
+            "n": "",
             "e": _STAGE_LABEL_NTD.get(stage, stage),
             "c": client,
             "r": _sanitize(app.get("owner_name") or "Sin asignar"),
-            "o": notes,
+            "o": _categorize_note(notes),
         })
     return result
 
@@ -472,7 +486,6 @@ def fetch_arrays():
 
     projection = {
         "_id": 0,
-        "full_name": 1,
         "job_title": 1,
         "country_origin": 1,
         "owner_name": 1,
@@ -557,6 +570,17 @@ def update_html(wd, ed, nsd, nid, ep, weekly, monthly, fuentes, ntd, gender, alo
     if aloj_si is not None:
         content = re.sub(r'const ALOJ_SI=\d+;', f'const ALOJ_SI={aloj_si};', content)
         content = re.sub(r'const ALOJ_NO=\d+;', f'const ALOJ_NO={aloj_no};', content)
+
+    # TOP_REF: anonymize referrer names — preserve counts, replace names with rank labels
+    def _anonymize_top_ref(match):
+        try:
+            data = json.loads(match.group(1))
+            anon = [{"name": f"Referidor #{i+1}", "count": r.get("count", 0)}
+                    for i, r in enumerate(data)]
+            return f"const TOP_REF={json.dumps(anon, ensure_ascii=False, separators=(',', ':'))};"
+        except Exception:
+            return match.group(0)
+    content = re.sub(r'const TOP_REF=(\[.*?\]);', _anonymize_top_ref, content, flags=re.DOTALL)
 
     # Timestamp
     now = datetime.now(timezone.utc)
