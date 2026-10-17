@@ -36,6 +36,25 @@ if not MONGO_URL:
         file=sys.stderr,
     )
     sys.exit(1)
+if MONGO_URL != MONGO_URL.strip():
+    print(
+        "ERROR: La URI de conexión contiene espacios o saltos de línea al inicio o al final.\n"
+        "  → Verificar el secreto MONGO_URL en GitHub Actions:\n"
+        "    · Sin espacios ni saltos de línea al inicio o al final\n"
+        "    · Sin comillas alrededor del valor",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+if not MONGO_URL.startswith(("mongodb://", "mongodb+srv://")):
+    print(
+        "ERROR: La URI de conexión tiene un formato inválido.\n"
+        "  → Debe comenzar exactamente con mongodb:// o mongodb+srv://\n"
+        "  → Verificar el secreto MONGO_URL en GitHub Actions:\n"
+        "    · Sin comillas alrededor del valor\n"
+        "    · URI completa, no solo el host o la contraseña",
+        file=sys.stderr,
+    )
+    sys.exit(1)
 DB_NAME = os.environ.get("DB_NAME", "workya_db")
 DASHBOARD_PATH = os.environ.get("DASHBOARD_PATH", "index.html")
 
