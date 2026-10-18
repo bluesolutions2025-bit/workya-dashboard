@@ -140,6 +140,19 @@ RECRUITER_BY_ID = {
     },
 }
 
+# Stable anonymization aliases for public output (Sprint 7C).
+# Ordered by (incorporacion, id) so the mapping never changes when new recruiters are added.
+# Only roster_actual=True recruiters receive an alias; admin/director kept separate.
+_ALIAS_MAP: dict[str, str] = {
+    r["id"]: f"Reclutadora-{chr(65 + i)}"
+    for i, r in enumerate(
+        sorted(
+            (r for r in RECRUITER_BY_ID.values() if r["es_recruiter"] and r["roster_actual"]),
+            key=lambda r: (r["incorporacion"], r["id"]),
+        )
+    )
+}
+
 # Secondary lookup: any name/username variant → canonical user_id
 # Resolves the stage_history dual-format problem (dora.moreno vs Dora Moreno)
 RECRUITER_NAME_TO_ID = {
@@ -998,7 +1011,7 @@ def run(apps, logs, jobs, clients, meta, now=None):
         recruiter_analytics[rid] = {
             "id": rid,
             "nombre_display": rinfo["nombre_display"],
-            "nombre_completo_db": rinfo["nombre_completo_db"],
+            "nombre_alias": _ALIAS_MAP.get(rid, f"Rec-{rid[:4]}"),
             "estado": estado_efectivo,
             "roster_actual": rinfo["roster_actual"],
             "incorporacion": rinfo["incorporacion"],
@@ -1908,7 +1921,14 @@ def run(apps, logs, jobs, clients, meta, now=None):
             "90d": sum(1 for a in apps if a["_started"] and a["_started"] >= d90),
             "historico_90d_mas": sum(1 for a in apps if a["_started"] and a["_started"] < d90),
         },
+        "por_periodo_activo": {
+            "7d":  sum(1 for a in apps if a["_started"] and a["_started"] >= d7  and a["_stage"] == "working"),
+            "30d": sum(1 for a in apps if a["_started"] and a["_started"] >= d30 and a["_stage"] == "working"),
+            "60d": sum(1 for a in apps if a["_started"] and a["_started"] >= d60 and a["_stage"] == "working"),
+            "90d": sum(1 for a in apps if a["_started"] and a["_started"] >= d90 and a["_stage"] == "working"),
+        },
         "nota": "Solo usar started_working_at para ingresos por período. NUNCA solo pipeline_stage=working.",
+        "nota_activo": "por_periodo_activo cuenta solo apps con started_working_at en ventana Y stage=working actualmente.",
     }
 
     # ------------------------------------------------------------------
@@ -2031,20 +2051,20 @@ def run(apps, logs, jobs, clients, meta, now=None):
             for c in cohort_results
         ), "Tasa de cohorte 30d solo se calcula si eligible >= muestra_min")
 
-    # Ana Sofia != Sofia
+    # Ana Sofia (9090a6fb) != Sofia (280fbee7) — IDs distintos
     chk("ana_sofia_distinta_de_sofia",
         RECRUITER_NAME_TO_ID.get("Ana Sofia") != RECRUITER_NAME_TO_ID.get("Sofia Osorio"),
-        "Ana Sofia y Sofia Osorio son personas diferentes (IDs distintos)")
+        "Ana Sofia (9090a6fb) y Sofia (280fbee7) son personas distintas (IDs distintos)")
 
-    # Natallia mapea a Nathalia Cano
+    # Reclutadora-C (188d78c7): nombre_display = 'Natallia'
     chk("natallia_mapea_a_nathalia_cano",
         RECRUITER_BY_ID.get("188d78c7-17f4-49a0-acda-96e79277bd84", {}).get("nombre_display") == "Natallia",
-        "nombre_display de Nathalia Cano es 'Natallia' (nombre operacional)")
+        "Reclutadora-C (188d78c7): nombre_display es 'Natallia' (nombre operacional)")
 
-    # Variantes de Dora no duplican recruiter
+    # Variantes username/display de Reclutadora-A (14e15932) no duplican recruiter
     chk("dora_variantes_mismo_id",
         RECRUITER_NAME_TO_ID.get("dora.moreno") == RECRUITER_NAME_TO_ID.get("Dora Moreno"),
-        "dora.moreno y Dora Moreno mapean al mismo user_id")
+        "dora.moreno y nombre_completo mapean al mismo user_id 14e15932")
 
     # Sidivan sin actividad — no recibe tasa artificial
     sidivan_perf = recruiter_analytics.get("f508e98a-921a-4ba3-8218-e2a1fc39eb9e", {})

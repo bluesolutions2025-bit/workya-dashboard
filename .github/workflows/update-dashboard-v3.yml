@@ -1,0 +1,83 @@
+name: Update Dashboard V3 Analytics
+
+# ACTIVATION STATUS: DISABLED
+# Schedule is commented out intentionally.
+# To activate: uncomment the schedule block below (Fase D authorization required).
+# See activation procedure in Sprint 7 Fase C report.
+
+on:
+  # Daily at 07:00 UTC — activated Sprint 7 Fase D (2026-10-18)
+  schedule:
+    - cron: '0 7 * * *'
+
+  # Manual trigger also available
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual run'
+        required: false
+        default: 'Manual trigger'
+
+jobs:
+  update-analytics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # ── 1. Checkout ────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python setup ────────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # ── 3. Dependencies ────────────────────────────────────────────────────
+      - name: Install dependencies
+        run: pip install pymongo dnspython
+
+      # ── 4. Generate analytics data (read-only MongoDB connection) ──────────
+      #    Uses MONGODB_URI secret — must be the read-only workya_analytics_ro user.
+      #    This step writes:
+      #      data/workya_analytics_v2.json
+      #      data/workya_analytics_v2_inline.js
+      - name: Generate V3 analytics data
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          DB_NAME: workya_db
+        run: python scripts/generate_analytics_v2.py
+
+      # ── 5. Pre-publish validation gate ─────────────────────────────────────
+      #    Fails the job (exit 1) if any critical check fails.
+      #    HC-1 failures are logged as warnings and do not block.
+      #    If this step fails, the data files are NOT committed.
+      - name: Validate generated data (pre-publish gate)
+        run: python scripts/validate_publish_v2.py data/workya_analytics_v2.json
+
+      # ── 6. Commit data files if changed ────────────────────────────────────
+      #    Only commits when content actually changed (idempotent).
+      #    IMPORTANT: Only data files are committed here.
+      #    Fase D: to deploy V3 as production index.html, uncomment the
+      #            block marked "Fase D" below after explicit authorization.
+      - name: Commit updated data files
+        run: |
+          git config user.name "WorkYa Analytics Bot"
+          git config user.email "noreply@work-ya.com"
+
+          git add data/workya_analytics_v2.json data/workya_analytics_v2_inline.js
+
+          # ── Fase D (DISABLED — uncomment after deployment authorization) ──
+          # git add index_v3_candidate.html
+          # git diff --cached --name-only | grep -q index_v3_candidate && \
+          #   git mv index_v3_candidate.html index.html && git add index.html
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update V3 analytics $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+            echo "Data files committed and pushed."
+          else
+            echo "No changes detected — skipping commit."
+          fi

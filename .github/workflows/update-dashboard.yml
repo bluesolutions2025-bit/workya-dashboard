@@ -1,9 +1,10 @@
 name: Auto-Update Dashboard
 
 on:
-  schedule:
-    # Every Monday at 7:00 AM UTC
-    - cron: '0 7 * * 1'
+  # DESACTIVADO — V3 es ahora el dashboard activo (Sprint 7 Fase D, 2026-10-18)
+  # Reactivar solo si se revierte a V1. No eliminar este workflow (sirve de rollback).
+  # schedule:
+  #   - cron: '0 7 * * 1'
   workflow_dispatch:
     inputs:
       reason:
