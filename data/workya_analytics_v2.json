@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-20T01:15:32Z",
+    "generated_at": "2026-10-20T12:31:34Z",
     "timezone": "UTC",
     "schema_version": "4.2.0",
     "data_range": {
@@ -9,7 +9,7 @@
     },
     "source_counts": {
       "applications": 766,
-      "activity_logs": 2404,
+      "activity_logs": 2405,
       "jobs": 68,
       "clients": 30,
       "meta_ad_daily": 188
@@ -26,12 +26,12 @@
     "working_stage_total": 337,
     "ingresos_con_fecha_total": 364,
     "kpis_conversion": {
-      "presentados_cliente_total": 588,
-      "pending_decision_sent": 103,
+      "presentados_cliente_total": 589,
+      "pending_decision_sent": 104,
       "presentados_finalizados": 485,
-      "tasa_presentacion_pct": 76.8,
+      "tasa_presentacion_pct": 76.9,
       "incorporados_total": 337,
-      "tasa_incorporacion_pct": 57.3,
+      "tasa_incorporacion_pct": 57.2,
       "tasa_incorporacion_finalizada_pct": 69.5,
       "nota_metodologia": "Presentados = snapshot etapa_actual in {sent,working,not_arriving,not_selected}. NO es conteo histórico de eventos de entrega — usa etapa actual como proxy. tasa_incorporacion incluye 'sent' pendientes; tasa_incorporacion_finalizada los excluye.",
       "nota_cobertura_stage_history": "stage_history cubre ~75.7% de apps. 3 apps están en etapas activas pero previamente pasaron por 'sent' (no contadas — impacto negligible)."
@@ -834,23 +834,23 @@
     "nota": "Funnel reconstruido desde activity_logs (stage_change events). started_working_at se usa para la llegada a 'working' cuando está disponible. Etapas legacy (selected, rejected) están mapeadas en calidad_datos.",
     "stage_mapping": {
       "activo": [
-        "interview",
+        "sent",
         "contacting",
         "new",
-        "sent"
+        "interview"
       ],
       "positivo": [
         "working"
       ],
       "negativo": [
-        "not_selected",
-        "not_arriving"
+        "not_arriving",
+        "not_selected"
       ],
       "legacy": [
+        "rejected",
         "reviewing",
-        "in_process",
         "selected",
-        "rejected"
+        "in_process"
       ]
     },
     "transiciones": [
@@ -1407,10 +1407,10 @@
     "total_working": 337,
     "total_cerrado_negativo": 148,
     "por_stage": {
-      "interview": 93,
+      "sent": 104,
       "contacting": 3,
-      "new": 82,
-      "sent": 103,
+      "new": 81,
+      "interview": 93,
       "working": 337,
       "not_selected": 73,
       "not_arriving": 75
@@ -1444,19 +1444,19 @@
     },
     "aging_desde_creacion": {
       "0-1d": 5,
-      "2-3d": 7,
-      "4-7d": 17,
+      "2-3d": 6,
+      "4-7d": 18,
       "8-14d": 12,
-      "15-30d": 41,
-      "30+d": 199
+      "15-30d": 40,
+      "30+d": 200
     },
     "aging_desde_ultimo_cambio_stage": {
       "0-1d": 5,
-      "2-3d": 7,
-      "4-7d": 17,
+      "2-3d": 6,
+      "4-7d": 18,
       "8-14d": 15,
-      "15-30d": 40,
-      "30+d": 197
+      "15-30d": 39,
+      "30+d": 198
     },
     "aging_sin_fecha": 0,
     "aging_nota": "aging_desde_ultimo_cambio_stage usa last stage_change de activity_logs; si no hay log, usa created_at como proxy. sum(buckets) + aging_sin_fecha = 281 (debe = total_activo).",
@@ -1546,7 +1546,7 @@
       "roster_actual": true,
       "incorporacion": "2026-03-01",
       "primera_actividad": "2026-03-05",
-      "ultima_actividad": "2026-10-19",
+      "ultima_actividad": "2026-10-20",
       "cartera_total": 541,
       "pipeline_activo": 129,
       "working_asignado": 302,
@@ -1555,7 +1555,7 @@
       "periodo_30d": {
         "apps_tocadas": 55,
         "cambios_stage": 4,
-        "total_acciones": 68,
+        "total_acciones": 69,
         "entrevistas_30d": 2,
         "enviados_30d": 0,
         "ingresos_30d": 8
@@ -1867,9 +1867,9 @@
   "clientes": {
     "nota": "applications.client_id = 0% cobertura. Vinculación via sent_to (texto libre). Solo variantes de alta confianza fueron normalizadas. Fill Rate NO calculado — sin Headcount solicitado confiable.",
     "cobertura": {
-      "apps_con_cliente": 537,
-      "apps_sin_cliente": 229,
-      "pct_cobertura": 70.1
+      "apps_con_cliente": 538,
+      "apps_sin_cliente": 228,
+      "pct_cobertura": 70.2
     },
     "normalizacion": {
       "variantes_mapeadas": {
@@ -2156,6 +2156,21 @@
         "estado_actividad": "activo"
       },
       {
+        "nombre": "CLIFF HOUSE",
+        "variantes_raw": [
+          "CLIFF HOUSE"
+        ],
+        "total": 5,
+        "ultimos_30d": 5,
+        "ultimos_60d": 5,
+        "ultimos_90d": 5,
+        "activos": 5,
+        "working": 0,
+        "not_arriving": 0,
+        "not_selected": 0,
+        "estado_actividad": "activo"
+      },
+      {
         "nombre": "GREATWOLF TENNERSVILLE PENSILVANIA",
         "variantes_raw": [
           "GREATWOLF TENNERSVILLE PENSILVANIA"
@@ -2166,21 +2181,6 @@
         "ultimos_90d": 4,
         "activos": 2,
         "working": 2,
-        "not_arriving": 0,
-        "not_selected": 0,
-        "estado_actividad": "activo"
-      },
-      {
-        "nombre": "CLIFF HOUSE",
-        "variantes_raw": [
-          "CLIFF HOUSE"
-        ],
-        "total": 4,
-        "ultimos_30d": 4,
-        "ultimos_60d": 4,
-        "ultimos_90d": 4,
-        "activos": 4,
-        "working": 0,
         "not_arriving": 0,
         "not_selected": 0,
         "estado_actividad": "activo"
@@ -2409,7 +2409,7 @@
         "activos": 14,
         "working": 3,
         "not_arriving": 2,
-        "ultimos_30d": 12,
+        "ultimos_30d": 11,
         "tasa_30d": 22.2
       },
       {
@@ -2851,7 +2851,7 @@
   },
   "jerarquia": {
     "nota": "Relación cliente→vacante reconstruida por aplicante (sent_to × job_id). Un aplicante puede vincularse a múltiples clientes. Cobertura: apps con sent_to definido.",
-    "apps_con_cliente_vinculado": 537,
+    "apps_con_cliente_vinculado": 538,
     "por_cliente": [
       {
         "cliente": "GREATWOLF THE LODGE PA",
@@ -4185,6 +4185,50 @@
         ]
       },
       {
+        "cliente": "CLIFF HOUSE",
+        "vacantes_count": 3,
+        "total": 5,
+        "activos": 5,
+        "working": 0,
+        "not_arriving": 0,
+        "not_selected": 0,
+        "vacantes": [
+          {
+            "job_id": "a7924dce-eba2-49ab-8ab2-ba11b4f3803b",
+            "titulo": "HOUSEKEEPING: ROOM ATTENDANT",
+            "ciudad": "Cape Neddick",
+            "estado": "Maine",
+            "total": 3,
+            "activos": 3,
+            "working": 0,
+            "not_arriving": 0,
+            "not_selected": 0
+          },
+          {
+            "job_id": "3f763dc7-10a2-4f4b-8ac8-983a9dacb05f",
+            "titulo": "FRONT OF DE HOUSE: BUSSER",
+            "ciudad": "Lake Placid",
+            "estado": "New York",
+            "total": 1,
+            "activos": 1,
+            "working": 0,
+            "not_arriving": 0,
+            "not_selected": 0
+          },
+          {
+            "job_id": "3ac95d4c-7032-40ca-ad67-70b6f7f824e2",
+            "titulo": "KITCHEN: PRE-COOK LINE-COOK",
+            "ciudad": "Cape Neddick",
+            "estado": "Maine",
+            "total": 1,
+            "activos": 1,
+            "working": 0,
+            "not_arriving": 0,
+            "not_selected": 0
+          }
+        ]
+      },
+      {
         "cliente": "GREATWOLF TENNERSVILLE PENSILVANIA",
         "vacantes_count": 3,
         "total": 4,
@@ -4223,50 +4267,6 @@
             "total": 1,
             "activos": 0,
             "working": 1,
-            "not_arriving": 0,
-            "not_selected": 0
-          }
-        ]
-      },
-      {
-        "cliente": "CLIFF HOUSE",
-        "vacantes_count": 3,
-        "total": 4,
-        "activos": 4,
-        "working": 0,
-        "not_arriving": 0,
-        "not_selected": 0,
-        "vacantes": [
-          {
-            "job_id": "a7924dce-eba2-49ab-8ab2-ba11b4f3803b",
-            "titulo": "HOUSEKEEPING: ROOM ATTENDANT",
-            "ciudad": "Cape Neddick",
-            "estado": "Maine",
-            "total": 2,
-            "activos": 2,
-            "working": 0,
-            "not_arriving": 0,
-            "not_selected": 0
-          },
-          {
-            "job_id": "3f763dc7-10a2-4f4b-8ac8-983a9dacb05f",
-            "titulo": "FRONT OF DE HOUSE: BUSSER",
-            "ciudad": "Lake Placid",
-            "estado": "New York",
-            "total": 1,
-            "activos": 1,
-            "working": 0,
-            "not_arriving": 0,
-            "not_selected": 0
-          },
-          {
-            "job_id": "3ac95d4c-7032-40ca-ad67-70b6f7f824e2",
-            "titulo": "KITCHEN: PRE-COOK LINE-COOK",
-            "ciudad": "Cape Neddick",
-            "estado": "Maine",
-            "total": 1,
-            "activos": 1,
-            "working": 0,
             "not_arriving": 0,
             "not_selected": 0
           }
@@ -4421,11 +4421,11 @@
     "nota": "Productividad y eficiencia por reclutadora y fuente de captación.",
     "kpis_conversion": {
       "total_aplicantes": 766,
-      "presentados_cliente_total": 588,
-      "pending_decision_sent": 103,
-      "tasa_presentacion_pct": 76.8,
+      "presentados_cliente_total": 589,
+      "pending_decision_sent": 104,
+      "tasa_presentacion_pct": 76.9,
       "incorporados_total": 337,
-      "tasa_incorporacion_pct": 57.3,
+      "tasa_incorporacion_pct": 57.2,
       "tasa_incorporacion_finalizada_pct": 69.5
     },
     "matriz_fuente_reclutadora": {
@@ -13711,8 +13711,8 @@
         "fi": null
       },
       {
-        "e": "new",
-        "c": null,
+        "e": "sent",
+        "c": "CLIFF HOUSE",
         "st": "Maine",
         "ci": "Cape Neddick",
         "r": "Dora",
@@ -14296,7 +14296,7 @@
       {
         "check": "pipeline_activo_solo_stages_activos",
         "passed": true,
-        "nota": "active_apps solo contiene stages: {'interview', 'contacting', 'new', 'sent'}"
+        "nota": "active_apps solo contiene stages: {'sent', 'contacting', 'new', 'interview'}"
       },
       {
         "check": "historico_no_mezclado_con_periodo",
@@ -14446,22 +14446,22 @@
       {
         "check": "gate_4a_entregados_formula",
         "passed": true,
-        "nota": "entregados=588 == sent+working+not_arr+not_sel=588"
+        "nota": "entregados=589 == sent+working+not_arr+not_sel=589"
       },
       {
         "check": "gate_4a_entregados_lte_total",
         "passed": true,
-        "nota": "entregados=588 <= total=766"
+        "nota": "entregados=589 <= total=766"
       },
       {
         "check": "gate_4a_incorporados_lte_entregados",
         "passed": true,
-        "nota": "incorporados=337 <= entregados=588"
+        "nota": "incorporados=337 <= entregados=589"
       },
       {
         "check": "gate_4a_tasa_entrega_valid",
         "passed": true,
-        "nota": "tasa_entrega=76.8"
+        "nota": "tasa_entrega=76.9"
       },
       {
         "check": "gate_4a_geo_state_sum",
@@ -14491,7 +14491,7 @@
       {
         "check": "gate_4b_tasa_finalizada_gte_base",
         "passed": true,
-        "nota": "tasa_inc_finalizada=69.5 >= tasa_inc_base=57.3"
+        "nota": "tasa_inc_finalizada=69.5 >= tasa_inc_base=57.2"
       },
       {
         "check": "gate_4b_meta_atrib_por_vacante",
@@ -14501,7 +14501,7 @@
       {
         "check": "gate_4b_pending_sent_eq_stage",
         "passed": true,
-        "nota": "pending_decision_sent=103 == stage_sent_count=103"
+        "nota": "pending_decision_sent=104 == stage_sent_count=104"
       },
       {
         "check": "gate_4b_schema_version",
@@ -14606,7 +14606,7 @@
       {
         "check": "gate_6a_tasa_colocacion_formula",
         "passed": true,
-        "nota": "recalc=57.3% vs reportado=57.3% (delta=0.00%)"
+        "nota": "recalc=57.2% vs reportado=57.2% (delta=0.00%)"
       },
       {
         "check": "gate_6a_sin_fuente_pct",
