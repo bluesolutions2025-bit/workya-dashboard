@@ -46,7 +46,7 @@ jobs:
       #      data/workya_analytics_v2_inline.js
       - name: Generate V3 analytics data
         env:
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MONGODB_URI: ${{ secrets.MONGO_URL }}
           DB_NAME: workya_db
         run: python scripts/generate_analytics_v2.py
 
