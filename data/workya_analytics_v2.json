@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generated_at": "2026-10-29T13:55:57Z",
+    "generated_at": "2026-10-30T13:50:24Z",
     "timezone": "UTC",
     "schema_version": "4.2.0",
     "data_range": {
       "first_app": "2025-12-04",
-      "last_app": "2026-10-28"
+      "last_app": "2026-10-30"
     },
     "source_counts": {
-      "applications": 806,
-      "activity_logs": 2471,
+      "applications": 808,
+      "activity_logs": 2472,
       "jobs": 69,
       "clients": 30,
       "meta_ad_daily": 188
@@ -22,83 +22,83 @@
     ]
   },
   "resumen_ejecutivo": {
-    "total_historico": 806,
-    "working_stage_total": 356,
-    "ingresos_con_fecha_total": 385,
+    "total_historico": 808,
+    "working_stage_total": 357,
+    "ingresos_con_fecha_total": 386,
     "kpis_conversion": {
       "presentados_cliente_total": 602,
-      "pending_decision_sent": 92,
-      "presentados_finalizados": 510,
-      "tasa_presentacion_pct": 74.7,
-      "incorporados_total": 356,
-      "tasa_incorporacion_pct": 59.1,
-      "tasa_incorporacion_finalizada_pct": 69.8,
+      "pending_decision_sent": 91,
+      "presentados_finalizados": 511,
+      "tasa_presentacion_pct": 74.5,
+      "incorporados_total": 357,
+      "tasa_incorporacion_pct": 59.3,
+      "tasa_incorporacion_finalizada_pct": 69.9,
       "nota_metodologia": "Presentados = snapshot etapa_actual in {sent,working,not_arriving,not_selected}. NO es conteo histórico de eventos de entrega — usa etapa actual como proxy. tasa_incorporacion incluye 'sent' pendientes; tasa_incorporacion_finalizada los excluye.",
       "nota_cobertura_stage_history": "stage_history cubre ~75.7% de apps. 3 apps están en etapas activas pero previamente pasaron por 'sent' (no contadas — impacto negligible)."
     },
     "periodos": {
       "7d": {
         "nuevos_aplicantes": 27,
-        "pipeline_activo": 296,
-        "ingresos_con_fecha": 6,
+        "pipeline_activo": 297,
+        "ingresos_con_fecha": 7,
         "not_selected": 0,
         "not_arriving": 0,
-        "sin_owner": 2,
-        "sin_fuente": 24,
+        "sin_owner": 3,
+        "sin_fuente": 22,
         "sin_job": 0
       },
       "30d": {
-        "nuevos_aplicantes": 96,
-        "pipeline_activo": 296,
-        "ingresos_con_fecha": 27,
+        "nuevos_aplicantes": 91,
+        "pipeline_activo": 297,
+        "ingresos_con_fecha": 26,
         "not_selected": 1,
         "not_arriving": 4,
-        "sin_owner": 7,
-        "sin_fuente": 61,
+        "sin_owner": 8,
+        "sin_fuente": 56,
         "sin_job": 0
       },
       "60d": {
-        "nuevos_aplicantes": 202,
-        "pipeline_activo": 296,
-        "ingresos_con_fecha": 53,
+        "nuevos_aplicantes": 204,
+        "pipeline_activo": 297,
+        "ingresos_con_fecha": 54,
         "not_selected": 3,
         "not_arriving": 7,
-        "sin_owner": 8,
+        "sin_owner": 9,
         "sin_fuente": 92,
         "sin_job": 0
       },
       "90d": {
-        "nuevos_aplicantes": 254,
-        "pipeline_activo": 296,
+        "nuevos_aplicantes": 255,
+        "pipeline_activo": 297,
         "ingresos_con_fecha": 72,
         "not_selected": 3,
         "not_arriving": 11,
-        "sin_owner": 8,
-        "sin_fuente": 105,
+        "sin_owner": 9,
+        "sin_fuente": 104,
         "sin_job": 0
       },
       "historico": {
-        "nuevos_aplicantes": 806,
-        "pipeline_activo": 296,
-        "ingresos_con_fecha": 385,
+        "nuevos_aplicantes": 808,
+        "pipeline_activo": 297,
+        "ingresos_con_fecha": 386,
         "not_selected": 74,
         "not_arriving": 80,
-        "sin_owner": 8,
+        "sin_owner": 9,
         "sin_fuente": 115,
         "sin_job": 2
       }
     }
   },
   "working_reconciliation": {
-    "A_working_stage": 356,
-    "B_valid_started_at": 385,
-    "A_intersect_B": 353,
+    "A_working_stage": 357,
+    "B_valid_started_at": 386,
+    "A_intersect_B": 354,
     "A_minus_B_working_sin_fecha": 3,
     "B_minus_A_fecha_sin_working": 32,
     "B_minus_A_por_stage": {
-      "sent": 17,
+      "not_arriving": 13,
       "new": 2,
-      "not_arriving": 13
+      "sent": 17
     },
     "fechas_futuras_excluidas": 1,
     "nota": "A∩B son placements confirmados con fecha. A-B son working sin fecha de inicio (no se puede asignar a período). B-A son inconsistencias de calidad: tienen fecha de inicio pero stage incorrecto."
@@ -107,10 +107,6 @@
     "nota": "aplicantes usa created_at; ingresos usa started_working_at. NUNCA mezclados.",
     "diario": {
       "aplicantes": [
-        {
-          "fecha": "2026-09-30",
-          "total": 0
-        },
         {
           "fecha": "2026-10-01",
           "total": 1
@@ -225,14 +221,14 @@
         },
         {
           "fecha": "2026-10-29",
-          "total": 0
+          "total": 1
+        },
+        {
+          "fecha": "2026-10-30",
+          "total": 1
         }
       ],
       "ingresos": [
-        {
-          "fecha": "2026-09-30",
-          "total": 2
-        },
         {
           "fecha": "2026-10-01",
           "total": 1
@@ -347,10 +343,14 @@
         },
         {
           "fecha": "2026-10-29",
+          "total": 1
+        },
+        {
+          "fecha": "2026-10-30",
           "total": 0
         }
       ],
-      "dias_con_actividad_apps": 24,
+      "dias_con_actividad_apps": 26,
       "dias_con_actividad_ingresos": 13,
       "nota": "30 días calendario completos — días sin actividad incluidos como 0."
     },
@@ -546,7 +546,7 @@
         },
         {
           "semana": "2026-W44",
-          "total": 17
+          "total": 19
         }
       ],
       "ingresos": [
@@ -740,7 +740,7 @@
         },
         {
           "semana": "2026-W44",
-          "total": 2
+          "total": 3
         }
       ]
     },
@@ -788,7 +788,7 @@
         },
         {
           "mes": "2026-10",
-          "total": 89
+          "total": 91
         }
       ],
       "ingresos": [
@@ -838,7 +838,7 @@
         },
         {
           "mes": "2026-10",
-          "total": 25
+          "total": 26
         }
       ]
     }
@@ -847,10 +847,10 @@
     "nota": "Funnel reconstruido desde activity_logs (stage_change events). started_working_at se usa para la llegada a 'working' cuando está disponible. Etapas legacy (selected, rejected) están mapeadas en calidad_datos.",
     "stage_mapping": {
       "activo": [
-        "contacting",
         "interview",
+        "new",
         "sent",
-        "new"
+        "contacting"
       ],
       "positivo": [
         "working"
@@ -860,9 +860,9 @@
         "not_arriving"
       ],
       "legacy": [
+        "in_process",
         "rejected",
         "reviewing",
-        "in_process",
         "selected"
       ]
     },
@@ -872,7 +872,7 @@
         "from_stage": "new",
         "to_stage": "contacting",
         "candidatos_con_ambas_fechas": 17,
-        "alcanzaron_from": 806,
+        "alcanzaron_from": 808,
         "alcanzaron_to": 17,
         "conversion": 2.1,
         "mediana_dias": 6,
@@ -898,7 +898,7 @@
         "from_stage": "new",
         "to_stage": "interview",
         "candidatos_con_ambas_fechas": 142,
-        "alcanzaron_from": 806,
+        "alcanzaron_from": 808,
         "alcanzaron_to": 142,
         "conversion": 17.6,
         "mediana_dias": 2.0,
@@ -925,31 +925,31 @@
         "to_stage": "working",
         "candidatos_con_ambas_fechas": 11,
         "alcanzaron_from": 18,
-        "alcanzaron_to": 386,
+        "alcanzaron_to": 387,
         "conversion": null,
         "mediana_dias": 7,
         "promedio_dias": 11.4,
         "cobertura_suficiente": false,
-        "nota": "from_stage 'sent' se omite frecuentemente — reached_from(18) < reached_to(386). Esta etapa no es un punto de paso universal en el pipeline."
+        "nota": "from_stage 'sent' se omite frecuentemente — reached_from(18) < reached_to(387). Esta etapa no es un punto de paso universal en el pipeline."
       }
     ]
   },
   "cohortes": {
     "metodologia": "Per-candidato: elegible si (now - created_at).days ≥ N días. Convertido si started_working_at dentro de N días de created_at. Denominador excluye candidatos creados hace menos de N días. KPI global calculado directamente — no requiere cohort 'maduro'.",
     "kpi_tasa_colocacion_30d": {
-      "valor": 40.1,
-      "numerador": 285,
-      "denominador": 710,
-      "too_recent": 96,
+      "valor": 40.0,
+      "numerador": 287,
+      "denominador": 717,
+      "too_recent": 91,
       "sin_created_at": 0,
       "label": "Tasa de Colocación a 30 Días",
-      "nota": "96 candidatos excluidos — creados hace <30 días."
+      "nota": "91 candidatos excluidos — creados hace <30 días."
     },
     "kpi_por_ventana": {
       "7d": {
-        "valor": 20.2,
+        "valor": 20.1,
         "numerador": 157,
-        "denominador": 779,
+        "denominador": 781,
         "too_recent": 27,
         "sin_created_at": 0,
         "label": "Tasa de Colocación a 7 Días",
@@ -957,30 +957,30 @@
       },
       "14d": {
         "valor": 30.3,
-        "numerador": 227,
-        "denominador": 750,
-        "too_recent": 56,
+        "numerador": 229,
+        "denominador": 755,
+        "too_recent": 53,
         "sin_created_at": 0,
         "label": "Tasa de Colocación a 14 Días",
-        "nota": "56 candidatos excluidos — creados hace <14 días."
+        "nota": "53 candidatos excluidos — creados hace <14 días."
       },
       "30d": {
-        "valor": 40.1,
-        "numerador": 285,
-        "denominador": 710,
-        "too_recent": 96,
+        "valor": 40.0,
+        "numerador": 287,
+        "denominador": 717,
+        "too_recent": 91,
         "sin_created_at": 0,
         "label": "Tasa de Colocación a 30 Días",
-        "nota": "96 candidatos excluidos — creados hace <30 días."
+        "nota": "91 candidatos excluidos — creados hace <30 días."
       },
       "60d": {
         "valor": 47.8,
         "numerador": 289,
         "denominador": 604,
-        "too_recent": 202,
+        "too_recent": 204,
         "sin_created_at": 0,
         "label": "Tasa de Colocación a 60 Días",
-        "nota": "202 candidatos excluidos — creados hace <60 días."
+        "nota": "204 candidatos excluidos — creados hace <60 días."
       }
     },
     "por_cohorte": [
@@ -1358,11 +1358,11 @@
           },
           "30d": {
             "label": "Conversión 30 días",
-            "eligible": 100,
-            "too_recent": 7,
-            "convertidos": 20,
-            "tasa": 20.0,
-            "nota": "7 candidatos excluidos — ventana de 30d aún abierta"
+            "eligible": 107,
+            "too_recent": 0,
+            "convertidos": 22,
+            "tasa": 20.6,
+            "nota": null
           },
           "60d": {
             "label": "Conversión 60 días",
@@ -1376,63 +1376,63 @@
       },
       {
         "cohorte": "2026-10",
-        "total_aplicantes": 89,
+        "total_aplicantes": 91,
         "muestra_suficiente": true,
         "ventanas": {
           "7d": {
             "label": "Conversión 7 días",
-            "eligible": 62,
+            "eligible": 64,
             "too_recent": 27,
             "convertidos": 6,
-            "tasa": 9.7,
+            "tasa": 9.4,
             "nota": "27 candidatos excluidos — ventana de 7d aún abierta"
           },
           "14d": {
             "label": "Conversión 14 días",
-            "eligible": 33,
-            "too_recent": 56,
-            "convertidos": 7,
-            "tasa": 21.2,
-            "nota": "56 candidatos excluidos — ventana de 14d aún abierta"
+            "eligible": 38,
+            "too_recent": 53,
+            "convertidos": 9,
+            "tasa": 23.7,
+            "nota": "53 candidatos excluidos — ventana de 14d aún abierta"
           },
           "30d": {
             "label": "Conversión 30 días",
             "eligible": 0,
-            "too_recent": 89,
+            "too_recent": 91,
             "convertidos": 0,
             "tasa": null,
-            "nota": "89 candidatos excluidos — ventana de 30d aún abierta"
+            "nota": "91 candidatos excluidos — ventana de 30d aún abierta"
           },
           "60d": {
             "label": "Conversión 60 días",
             "eligible": 0,
-            "too_recent": 89,
+            "too_recent": 91,
             "convertidos": 0,
             "tasa": null,
-            "nota": "89 candidatos excluidos — ventana de 60d aún abierta"
+            "nota": "91 candidatos excluidos — ventana de 60d aún abierta"
           }
         }
       }
     ]
   },
   "pipeline": {
-    "total_activo": 296,
-    "total_working": 356,
+    "total_activo": 297,
+    "total_working": 357,
     "total_cerrado_negativo": 154,
     "por_stage": {
-      "contacting": 3,
       "interview": 95,
-      "sent": 92,
-      "new": 106,
-      "working": 356,
+      "new": 108,
+      "sent": 91,
+      "contacting": 3,
+      "working": 357,
       "not_selected": 74,
       "not_arriving": 80
     },
     "por_reclutadora": {
       "14e15932-1b87-4548-86a7-8af284db93ef": {
         "nombre_display": "Dora",
-        "activo": 119,
-        "working": 318
+        "activo": 118,
+        "working": 319
       },
       "280fbee7-41ac-4c64-9820-bc587bcc47c6": {
         "nombre_display": "Sofia",
@@ -1446,7 +1446,7 @@
       },
       "f508e98a-921a-4ba3-8218-e2a1fc39eb9e": {
         "nombre_display": "Sidivan",
-        "activo": 17,
+        "activo": 18,
         "working": 2
       },
       "9090a6fb-d6f2-4511-8a44-0c507c582911": {
@@ -1456,46 +1456,46 @@
       }
     },
     "aging_desde_creacion": {
-      "0-1d": 14,
-      "2-3d": 3,
-      "4-7d": 14,
-      "8-14d": 25,
-      "15-30d": 21,
-      "30+d": 219
+      "0-1d": 9,
+      "2-3d": 9,
+      "4-7d": 9,
+      "8-14d": 23,
+      "15-30d": 26,
+      "30+d": 221
     },
     "aging_desde_ultimo_cambio_stage": {
-      "0-1d": 14,
-      "2-3d": 5,
-      "4-7d": 14,
-      "8-14d": 24,
-      "15-30d": 22,
-      "30+d": 217
+      "0-1d": 9,
+      "2-3d": 9,
+      "4-7d": 11,
+      "8-14d": 23,
+      "15-30d": 26,
+      "30+d": 219
     },
     "aging_sin_fecha": 0,
-    "aging_nota": "aging_desde_ultimo_cambio_stage usa last stage_change de activity_logs; si no hay log, usa created_at como proxy. sum(buckets) + aging_sin_fecha = 296 (debe = total_activo).",
+    "aging_nota": "aging_desde_ultimo_cambio_stage usa last stage_change de activity_logs; si no hay log, usa created_at como proxy. sum(buckets) + aging_sin_fecha = 297 (debe = total_activo).",
     "pipeline_estancado": {
       "7+d": {
-        "cantidad": 268,
-        "pct": 90.5
+        "cantidad": 270,
+        "pct": 90.9
       },
       "14+d": {
-        "cantidad": 245,
-        "pct": 82.8
+        "cantidad": 249,
+        "pct": 83.8
       },
       "30+d": {
-        "cantidad": 219,
-        "pct": 74.0,
+        "cantidad": 223,
+        "pct": 75.1,
         "con_log": 93,
-        "fallback_created_at": 126,
-        "nota_diferencia": "De los 219 estancados >30d: 93 tienen stage_change log confirmado; 126 usan created_at como proxy (sin stage_change log). La alerta pipeline_30d_plus solo cuenta los 93 con log confirmado."
+        "fallback_created_at": 130,
+        "nota_diferencia": "De los 223 estancados >30d: 93 tienen stage_change log confirmado; 130 usan created_at como proxy (sin stage_change log). La alerta pipeline_30d_plus solo cuenta los 93 con log confirmado."
       }
     },
     "pipeline_estancado_por_reclutadora": {
       "14e15932-1b87-4548-86a7-8af284db93ef": {
         "nombre_display": "Dora",
-        "activo_total": 119,
+        "activo_total": 118,
         "estancado_30d": 94,
-        "pct_estancado": 79.0
+        "pct_estancado": 79.7
       },
       "adea7407-657f-4cee-83a6-5d4447e51ceb": {
         "nombre_display": "Director",
@@ -1506,8 +1506,8 @@
       "280fbee7-41ac-4c64-9820-bc587bcc47c6": {
         "nombre_display": "Sofia",
         "activo_total": 130,
-        "estancado_30d": 102,
-        "pct_estancado": 78.5
+        "estancado_30d": 106,
+        "pct_estancado": 81.5
       },
       "188d78c7-17f4-49a0-acda-96e79277bd84": {
         "nombre_display": "Natallia",
@@ -1523,28 +1523,28 @@
       },
       "f508e98a-921a-4ba3-8218-e2a1fc39eb9e": {
         "nombre_display": "Sidivan",
-        "activo_total": 17,
+        "activo_total": 18,
         "estancado_30d": 0,
         "pct_estancado": 0.0
       }
     }
   },
   "recency_working": {
-    "total_working_stage": 356,
-    "con_fecha_valida": 385,
+    "total_working_stage": 357,
+    "con_fecha_valida": 386,
     "sin_fecha": 3,
     "pct_sin_fecha": 0.8,
     "por_periodo": {
-      "7d": 6,
-      "30d": 27,
-      "60d": 53,
+      "7d": 7,
+      "30d": 26,
+      "60d": 54,
       "90d": 72,
-      "historico_90d_mas": 313
+      "historico_90d_mas": 314
     },
     "por_periodo_activo": {
-      "7d": 6,
-      "30d": 25,
-      "60d": 51,
+      "7d": 7,
+      "30d": 24,
+      "60d": 52,
       "90d": 68
     },
     "nota": "Solo usar started_working_at para ingresos por período. NUNCA solo pipeline_stage=working.",
@@ -1559,35 +1559,35 @@
       "roster_actual": true,
       "incorporacion": "2026-03-01",
       "primera_actividad": "2026-03-05",
-      "ultima_actividad": "2026-10-28",
+      "ultima_actividad": "2026-10-30",
       "cartera_total": 553,
-      "pipeline_activo": 119,
-      "working_asignado": 318,
+      "pipeline_activo": 118,
+      "working_asignado": 319,
       "not_selected": 46,
       "not_arriving": 70,
       "periodo_30d": {
         "apps_tocadas": 49,
         "cambios_stage": 13,
-        "total_acciones": 68,
+        "total_acciones": 69,
         "entrevistas_30d": 4,
         "enviados_30d": 0,
-        "ingresos_30d": 22
+        "ingresos_30d": 21
       },
       "recencia_ingresos": {
-        "7d": 4,
-        "30d": 22,
-        "60d": 41
+        "7d": 5,
+        "30d": 21,
+        "60d": 42
       },
       "performance": {
         "tasa_colocacion_30d": {
           "valor": 57.5,
-          "numerador": 294,
-          "denominador": 511,
+          "numerador": 295,
+          "denominador": 513,
           "muestra_suficiente": true,
           "muestra_minima": 15,
           "nota": null
         },
-        "mediana_dias_hasta_ingreso": 9,
+        "mediana_dias_hasta_ingreso": 9.0,
         "not_arriving_rate": 12.7
       }
     },
@@ -1606,9 +1606,9 @@
       "not_selected": 28,
       "not_arriving": 9,
       "periodo_30d": {
-        "apps_tocadas": 50,
+        "apps_tocadas": 46,
         "cambios_stage": 4,
-        "total_acciones": 73,
+        "total_acciones": 65,
         "entrevistas_30d": 4,
         "enviados_30d": 0,
         "ingresos_30d": 1
@@ -1620,9 +1620,9 @@
       },
       "performance": {
         "tasa_colocacion_30d": {
-          "valor": 14.5,
-          "numerador": 24,
-          "denominador": 165,
+          "valor": 14.7,
+          "numerador": 25,
+          "denominador": 170,
           "muestra_suficiente": true,
           "muestra_minima": 15,
           "nota": null
@@ -1680,8 +1680,8 @@
       "incorporacion": "2026-09-21",
       "primera_actividad": "2026-10-14",
       "ultima_actividad": "2026-10-28",
-      "cartera_total": 19,
-      "pipeline_activo": 17,
+      "cartera_total": 20,
+      "pipeline_activo": 18,
       "working_asignado": 2,
       "not_selected": 0,
       "not_arriving": 0,
@@ -1715,7 +1715,7 @@
       "id": "9090a6fb-d6f2-4511-8a44-0c507c582911",
       "nombre_display": "Ana Sofia",
       "nombre_alias": "Reclutadora-E",
-      "estado": "activa",
+      "estado": "baja_actividad",
       "roster_actual": true,
       "incorporacion": "2026-09-24",
       "primera_actividad": "2026-09-24",
@@ -1760,16 +1760,16 @@
         "canal": "reclutadora",
         "label": "Reclutadora (Dora)",
         "tipo": "interno",
-        "aplicantes": 440,
+        "aplicantes": 441,
         "activos": 84,
-        "working": 268,
+        "working": 269,
         "not_arriving": 63,
         "not_selected": 25,
-        "mediana_dias_hasta_ingreso": 9,
+        "mediana_dias_hasta_ingreso": 9.0,
         "tasa_colocacion_30d": {
           "valor": 60.0,
-          "numerador": 248,
-          "denominador": 413,
+          "numerador": 249,
+          "denominador": 415,
           "muestra_suficiente": true
         }
       },
@@ -1784,9 +1784,9 @@
         "not_selected": 0,
         "mediana_dias_hasta_ingreso": 7.5,
         "tasa_colocacion_30d": {
-          "valor": 1.9,
-          "numerador": 1,
-          "denominador": 54,
+          "valor": 3.4,
+          "numerador": 2,
+          "denominador": 59,
           "muestra_suficiente": true
         }
       },
@@ -1845,8 +1845,8 @@
         "canal": "instagram_organico",
         "label": "Instagram Orgánico",
         "tipo": "organico",
-        "aplicantes": 7,
-        "activos": 7,
+        "aplicantes": 8,
+        "activos": 8,
         "working": 0,
         "not_arriving": 0,
         "not_selected": 0,
@@ -1881,8 +1881,8 @@
     "nota": "applications.client_id = 0% cobertura. Vinculación via sent_to (texto libre). Solo variantes de alta confianza fueron normalizadas. Fill Rate NO calculado — sin Headcount solicitado confiable.",
     "cobertura": {
       "apps_con_cliente": 552,
-      "apps_sin_cliente": 254,
-      "pct_cobertura": 68.5
+      "apps_sin_cliente": 256,
+      "pct_cobertura": 68.3
     },
     "normalizacion": {
       "variantes_mapeadas": {
@@ -1978,7 +1978,7 @@
         "total": 40,
         "ultimos_30d": 1,
         "ultimos_60d": 6,
-        "ultimos_90d": 8,
+        "ultimos_90d": 7,
         "activos": 8,
         "working": 27,
         "not_arriving": 4,
@@ -2006,7 +2006,7 @@
           "KALAHARI TEXAS"
         ],
         "total": 29,
-        "ultimos_30d": 3,
+        "ultimos_30d": 2,
         "ultimos_60d": 6,
         "ultimos_90d": 8,
         "activos": 6,
@@ -2021,7 +2021,7 @@
           "HIGH PEAKS RESORT "
         ],
         "total": 29,
-        "ultimos_30d": 10,
+        "ultimos_30d": 8,
         "ultimos_60d": 17,
         "ultimos_90d": 22,
         "activos": 10,
@@ -2098,7 +2098,7 @@
           "GREATWOLF GURNEE ILLINOIS"
         ],
         "total": 11,
-        "ultimos_30d": 6,
+        "ultimos_30d": 3,
         "ultimos_60d": 11,
         "ultimos_90d": 11,
         "activos": 2,
@@ -2131,8 +2131,8 @@
         "ultimos_30d": 8,
         "ultimos_60d": 8,
         "ultimos_90d": 8,
-        "activos": 5,
-        "working": 1,
+        "activos": 4,
+        "working": 2,
         "not_arriving": 2,
         "not_selected": 0,
         "estado_actividad": "activo"
@@ -2206,12 +2206,12 @@
         "total": 3,
         "ultimos_30d": 0,
         "ultimos_60d": 0,
-        "ultimos_90d": 1,
+        "ultimos_90d": 0,
         "activos": 1,
         "working": 2,
         "not_arriving": 0,
         "not_selected": 0,
-        "estado_actividad": "bajo"
+        "estado_actividad": "historico"
       },
       {
         "nombre": "ECHD OHIO",
@@ -2292,8 +2292,8 @@
         "activos": 47,
         "working": 38,
         "not_arriving": 10,
-        "ultimos_30d": 10,
-        "tasa_30d": 48.9
+        "ultimos_30d": 9,
+        "tasa_30d": 48.4
       },
       {
         "job_id": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
@@ -2340,11 +2340,11 @@
         "categoria": "housekeeping",
         "ciudad": "Big Island",
         "estado_us": "Hawaii",
-        "total": 35,
-        "activos": 12,
+        "total": 36,
+        "activos": 13,
         "working": 19,
         "not_arriving": 0,
-        "ultimos_30d": 2,
+        "ultimos_30d": 3,
         "tasa_30d": 60.6
       },
       {
@@ -2383,7 +2383,7 @@
         "activos": 8,
         "working": 20,
         "not_arriving": 2,
-        "ultimos_30d": 3,
+        "ultimos_30d": 2,
         "tasa_30d": 62.5
       },
       {
@@ -2422,7 +2422,7 @@
         "activos": 13,
         "working": 5,
         "not_arriving": 4,
-        "ultimos_30d": 9,
+        "ultimos_30d": 6,
         "tasa_30d": 25.0
       },
       {
@@ -2462,7 +2462,7 @@
         "working": 9,
         "not_arriving": 4,
         "ultimos_30d": 1,
-        "tasa_30d": 53.3
+        "tasa_30d": 56.2
       },
       {
         "job_id": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
@@ -2570,8 +2570,8 @@
       },
       {
         "estado": "Hawaii",
-        "total": 73,
-        "activos": 28,
+        "total": 74,
+        "activos": 29,
         "working": 35,
         "not_arriving": 4,
         "not_selected": 6,
@@ -2620,8 +2620,8 @@
       },
       {
         "estado": "North Carolina",
-        "total": 36,
-        "activos": 28,
+        "total": 37,
+        "activos": 29,
         "working": 8,
         "not_arriving": 0,
         "not_selected": 0,
@@ -2651,12 +2651,12 @@
       {
         "estado": "Maine",
         "total": 25,
-        "activos": 9,
-        "working": 8,
+        "activos": 8,
+        "working": 9,
         "not_arriving": 6,
         "not_selected": 2,
         "ciudades_count": 2,
-        "tasa_incorporacion": 50.0
+        "tasa_incorporacion": 52.9
       },
       {
         "estado": "Illinois",
@@ -2735,8 +2735,8 @@
       {
         "ciudad": "Big Island",
         "estado": "Hawaii",
-        "total": 57,
-        "activos": 19,
+        "total": 58,
+        "activos": 20,
         "working": 29,
         "not_arriving": 4
       },
@@ -2757,20 +2757,20 @@
         "not_arriving": 2
       },
       {
+        "ciudad": "Concord",
+        "estado": "North Carolina",
+        "total": 24,
+        "activos": 21,
+        "working": 3,
+        "not_arriving": 0
+      },
+      {
         "ciudad": "Gulf Shores",
         "estado": "Alabama",
         "total": 23,
         "activos": 4,
         "working": 18,
         "not_arriving": 1
-      },
-      {
-        "ciudad": "Concord",
-        "estado": "North Carolina",
-        "total": 23,
-        "activos": 20,
-        "working": 3,
-        "not_arriving": 0
       },
       {
         "ciudad": "Gurnee",
@@ -2824,8 +2824,8 @@
         "ciudad": "Cape Neddick",
         "estado": "Maine",
         "total": 8,
-        "activos": 5,
-        "working": 1,
+        "activos": 4,
+        "working": 2,
         "not_arriving": 2
       },
       {
@@ -4113,8 +4113,8 @@
         "cliente": "CLIFF HOUSE",
         "vacantes_count": 3,
         "total": 8,
-        "activos": 5,
-        "working": 1,
+        "activos": 4,
+        "working": 2,
         "not_arriving": 2,
         "not_selected": 0,
         "vacantes": [
@@ -4124,8 +4124,8 @@
             "ciudad": "Cape Neddick",
             "estado": "Maine",
             "total": 4,
-            "activos": 2,
-            "working": 0,
+            "activos": 1,
+            "working": 1,
             "not_arriving": 2,
             "not_selected": 0
           },
@@ -4455,13 +4455,13 @@
   "productividad": {
     "nota": "Productividad y eficiencia por reclutadora y fuente de captación.",
     "kpis_conversion": {
-      "total_aplicantes": 806,
+      "total_aplicantes": 808,
       "presentados_cliente_total": 602,
-      "pending_decision_sent": 92,
-      "tasa_presentacion_pct": 74.7,
-      "incorporados_total": 356,
-      "tasa_incorporacion_pct": 59.1,
-      "tasa_incorporacion_finalizada_pct": 69.8
+      "pending_decision_sent": 91,
+      "tasa_presentacion_pct": 74.5,
+      "incorporados_total": 357,
+      "tasa_incorporacion_pct": 59.3,
+      "tasa_incorporacion_finalizada_pct": 69.9
     },
     "matriz_fuente_reclutadora": {
       "reclutadoras": [
@@ -4485,9 +4485,9 @@
       "celdas": [
         {
           "fuente": "reclutadora",
-          "total": 440,
+          "total": 441,
           "por_reclutadora": {
-            "Dora": 423,
+            "Dora": 424,
             "Natallia": 9,
             "Sofia": 8
           }
@@ -4498,9 +4498,9 @@
           "por_reclutadora": {
             "Ana Sofia": 7,
             "Director": 1,
-            "Dora": 16,
+            "Dora": 15,
             "Natallia": 10,
-            "Sidivan": 19,
+            "Sidivan": 20,
             "Sin asignar": 8,
             "Sofia": 54
           }
@@ -4532,9 +4532,10 @@
         },
         {
           "fuente": "instagram_organico",
-          "total": 7,
+          "total": 8,
           "por_reclutadora": {
             "Dora": 4,
+            "Sin asignar": 1,
             "Sofia": 3
           }
         },
@@ -4550,7 +4551,7 @@
   },
   "apps_anonimas": {
     "nota_privacidad": "Sin datos personales identificables. Registros por aplicante sin nombres de candidatos, contacto ni información sensible del candidato. Campos incluidos: etapa pipeline, cliente, estado, ciudad, reclutadora, fuente, vacante y fechas agregadas.",
-    "total_registros": 806,
+    "total_registros": 808,
     "claves": {
       "e": "etapa",
       "c": "cliente",
@@ -4575,7 +4576,7 @@
       "new",
       "sent"
     ],
-    "fecha_generacion": "2026-10-29",
+    "fecha_generacion": "2026-10-30",
     "registros": [
       {
         "e": "not_selected",
@@ -14154,16 +14155,16 @@
         "fi": null
       },
       {
-        "e": "sent",
+        "e": "working",
         "c": "CLIFF HOUSE",
         "st": "Maine",
         "ci": "Cape Neddick",
         "r": "Dora",
-        "f": "sin_fuente",
+        "f": "reclutadora",
         "vt": "HOUSEKEEPING: ROOM ATTENDANT",
         "vi": "a7924dce-eba2-49ab-8ab2-ba11b4f3803b",
         "fc": "2026-10-28",
-        "fi": null
+        "fi": "2026-10-29"
       },
       {
         "e": "new",
@@ -14248,6 +14249,30 @@
         "vi": "7ff3079a-aee8-45f0-8333-53461d00746e",
         "fc": "2026-10-28",
         "fi": null
+      },
+      {
+        "e": "new",
+        "c": null,
+        "st": "North Carolina",
+        "ci": "Concord",
+        "r": "Sidivan",
+        "f": "sin_fuente",
+        "vt": "KITCHEN: PRE-COOK LINE-COOK",
+        "vi": "c187ad21-1a20-464c-bddd-83a57559f760",
+        "fc": "2026-10-29",
+        "fi": null
+      },
+      {
+        "e": "new",
+        "c": null,
+        "st": "Hawaii",
+        "ci": "Big Island",
+        "r": null,
+        "f": "instagram_organico",
+        "vt": "HOSEKEEPING: HOUSEMAN (Housing+Transportation included)",
+        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
+        "fc": "2026-10-30",
+        "fi": null
       }
     ]
   },
@@ -14261,7 +14286,7 @@
     "aviso_periodo": "AVISO: datos Meta abarcan solo 24 días (2026-09-14 a 2026-10-07). El total '30d' es idéntico al histórico — el período 30d captura todos los datos disponibles.",
     "atribucion": {
       "apps_con_lead_source_meta": 108,
-      "total_apps": 806,
+      "total_apps": 808,
       "pct_apps_atribuidas": 13.4,
       "nota": "lead_source='meta' ≈ atribución. meta_ad_id individual solo presente en docs recientes (~24%). Sin join confiable app↔campaña."
     },
@@ -14301,7 +14326,7 @@
     },
     "por_periodo": {
       "7d": {
-        "periodo_definicion": "Últimos 7 días (2026-10-22 a 2026-10-29)",
+        "periodo_definicion": "Últimos 7 días (2026-10-23 a 2026-10-30)",
         "gasto": 0,
         "leads": 0,
         "conversaciones": 0,
@@ -14310,16 +14335,16 @@
         "costo_por_conv": null
       },
       "30d": {
-        "periodo_definicion": "Últimos 30 días (2026-09-29 a 2026-10-29)",
-        "gasto": 499.36,
-        "leads": 15,
-        "conversaciones": 108,
-        "impresiones": 26514,
-        "cpl": 33.29,
-        "costo_por_conv": 4.62
+        "periodo_definicion": "Últimos 30 días (2026-09-30 a 2026-10-30)",
+        "gasto": 362.61,
+        "leads": 9,
+        "conversaciones": 79,
+        "impresiones": 19906,
+        "cpl": 40.29,
+        "costo_por_conv": 4.59
       },
       "60d": {
-        "periodo_definicion": "Últimos 60 días (2026-08-30 a 2026-10-29)",
+        "periodo_definicion": "Últimos 60 días (2026-08-31 a 2026-10-30)",
         "gasto": 3616.49,
         "leads": 135,
         "conversaciones": 848,
@@ -14338,13 +14363,13 @@
       }
     },
     "periodo_30d": {
-      "periodo_definicion": "Últimos 30 días (2026-09-29 a 2026-10-29)",
-      "gasto": 499.36,
-      "leads": 15,
-      "conversaciones": 108,
-      "impresiones": 26514,
-      "cpl": 33.29,
-      "costo_por_conv": 4.62
+      "periodo_definicion": "Últimos 30 días (2026-09-30 a 2026-10-30)",
+      "gasto": 362.61,
+      "leads": 9,
+      "conversaciones": 79,
+      "impresiones": 19906,
+      "cpl": 40.29,
+      "costo_por_conv": 4.59
     },
     "por_mes": [
       {
@@ -14548,7 +14573,7 @@
       "apps_con_meta_ad_id": 0,
       "apps_matched_to_campaign": 0,
       "apps_no_match_in_daily": 0,
-      "nota_metodologia": "Join: applications.meta_ad_id → meta_ad_daily.ad_id. Cobertura: 0/806 apps (~0.0% del total). Muestra apps con meta_ad_id verificable — NO infiere gasto por vacante. NO usar para calcular ROI ni CPH por vacante.",
+      "nota_metodologia": "Join: applications.meta_ad_id → meta_ad_daily.ad_id. Cobertura: 0/808 apps (~0.0% del total). Muestra apps con meta_ad_id verificable — NO infiere gasto por vacante. NO usar para calcular ROI ni CPH por vacante.",
       "identificador_faltante": "Para atribución completa: poblar applications.meta_ad_id en TODOS los aplicantes Meta. Campo existe en WorkYa-security. Actualmente solo apps recientes tienen el campo.",
       "por_vacante": []
     }
@@ -14568,10 +14593,10 @@
       {
         "tipo": "nuevo_sin_gestion",
         "label": "Nuevos sin gestión >3d",
-        "total": 12,
+        "total": 13,
         "por_reclutadora": {
           "Dora": 7,
-          "Sin asignar": 4,
+          "Sin asignar": 5,
           "Sidivan": 1
         }
       },
@@ -14632,8 +14657,8 @@
         "total": 111,
         "por_reclutadora": {
           "Sofia": 52,
-          "Sidivan": 17,
-          "Dora": 16,
+          "Sidivan": 18,
+          "Dora": 15,
           "Natallia": 10,
           "Sin asignar": 8,
           "Ana Sofia": 7,
@@ -14641,9 +14666,9 @@
         }
       }
     ],
-    "incidencias_totales": 348,
+    "incidencias_totales": 349,
     "candidatos_afectados_unicos": 234,
-    "nota_deduplicacion": "Un candidato puede aparecer en múltiples alertas simultáneamente. 'incidencias_totales' (348) = suma de todos los totales. 'candidatos_afectados_unicos' (234) = candidatos distintos en ≥1 alerta. Usar 'incidencias_totales' para carga de trabajo; 'candidatos_afectados_unicos' para alcance de candidatos."
+    "nota_deduplicacion": "Un candidato puede aparecer en múltiples alertas simultáneamente. 'incidencias_totales' (349) = suma de todos los totales. 'candidatos_afectados_unicos' (234) = candidatos distintos en ≥1 alerta. Usar 'incidencias_totales' para carga de trabajo; 'candidatos_afectados_unicos' para alcance de candidatos."
   },
   "calidad_datos": {
     "resumen": {
@@ -14659,7 +14684,7 @@
         "label": "Working sin fecha de inicio",
         "count": 3,
         "pct": 0.4,
-        "total_base": 806,
+        "total_base": 808,
         "severidad": "critica",
         "metric_impact": "Ingresos working sin started_working_at — no asignables a período",
         "nota": null
@@ -14669,17 +14694,17 @@
         "label": "Fecha de ingreso con stage incompatible",
         "count": 32,
         "pct": 4.0,
-        "total_base": 806,
+        "total_base": 808,
         "severidad": "critica",
         "metric_impact": "started_working_at existe pero pipeline_stage ≠ working — inconsistencia",
-        "nota": "Por stage actual: {'sent': 17, 'new': 2, 'not_arriving': 13}"
+        "nota": "Por stage actual: {'not_arriving': 13, 'new': 2, 'sent': 17}"
       },
       {
         "issue": "fechas_futuras",
         "label": "Fechas futuras en started_working_at",
         "count": 1,
         "pct": 0.1,
-        "total_base": 806,
+        "total_base": 808,
         "severidad": "critica",
         "metric_impact": "started_working_at en el futuro — excluidas de métricas temporales",
         "nota": "Probablemente typos (ej: 2026-12-01 en lugar de 2025-12-01)"
@@ -14698,8 +14723,8 @@
         "issue": "sin_lead_source",
         "label": "Sin fuente de captación",
         "count": 115,
-        "pct": 14.3,
-        "total_base": 806,
+        "pct": 14.2,
+        "total_base": 808,
         "severidad": "alta",
         "metric_impact": "Analytics de fuentes subestimadas",
         "nota": null
@@ -14707,9 +14732,9 @@
       {
         "issue": "sin_owner",
         "label": "Sin reclutadora asignada",
-        "count": 8,
-        "pct": 1.0,
-        "total_base": 806,
+        "count": 9,
+        "pct": 1.1,
+        "total_base": 808,
         "severidad": "alta",
         "metric_impact": "Candidatos no asignados a reclutadora",
         "nota": null
@@ -14719,7 +14744,7 @@
         "label": "Sin job_id",
         "count": 2,
         "pct": 0.2,
-        "total_base": 806,
+        "total_base": 808,
         "severidad": "media",
         "metric_impact": "Análisis por vacante imposible para estos candidatos",
         "nota": null
@@ -14727,9 +14752,9 @@
       {
         "issue": "sla_met_nulo",
         "label": "sla_met vacío",
-        "count": 805,
+        "count": 807,
         "pct": 99.9,
-        "total_base": 806,
+        "total_base": 808,
         "severidad": "media",
         "metric_impact": "KPI de SLA inutilizable — campo nunca llenado",
         "nota": null
@@ -14737,19 +14762,19 @@
       {
         "issue": "gender_no_normalizado",
         "label": "Género en 7 formatos distintos",
-        "count": 804,
+        "count": 806,
         "pct": 99.8,
-        "total_base": 806,
+        "total_base": 808,
         "severidad": "alta",
         "metric_impact": "Reportes de género inconsistentes — múltiples formatos",
-        "nota": "Valores: {'Masculino': 300, 'male': 130, 'Femenino': 218, 'female': 133, 'M': 9, 'F': 13, '[valor_redactado]': 1}"
+        "nota": "Valores: {'Masculino': 302, 'male': 130, 'Femenino': 218, 'female': 133, 'M': 9, 'F': 13, '[valor_redactado]': 1}"
       },
       {
         "issue": "client_id_vacio",
         "label": "client_id sin cobertura",
-        "count": 806,
+        "count": 808,
         "pct": 100.0,
-        "total_base": 806,
+        "total_base": 808,
         "severidad": "alta",
         "metric_impact": "Vinculación app→cliente depende de sent_to (texto libre, no UUID)",
         "nota": null
@@ -14814,7 +14839,7 @@
       {
         "check": "pipeline_activo_solo_stages_activos",
         "passed": true,
-        "nota": "active_apps solo contiene stages: {'contacting', 'interview', 'sent', 'new'}"
+        "nota": "active_apps solo contiene stages: {'interview', 'new', 'sent', 'contacting'}"
       },
       {
         "check": "historico_no_mezclado_con_periodo",
@@ -14834,7 +14859,7 @@
       {
         "check": "gate_alert_30d_lte_stale_30d",
         "passed": true,
-        "nota": "alert_30d=93 <= stale_30d=219 — alertas son subconjunto de estancados"
+        "nota": "alert_30d=93 <= stale_30d=223 — alertas son subconjunto de estancados"
       },
       {
         "check": "gate_stale_tiene_desglose",
@@ -14844,7 +14869,7 @@
       {
         "check": "gate_stale_desglose_correcto",
         "passed": true,
-        "nota": "con_log=93 + fallback=126 == total=219"
+        "nota": "con_log=93 + fallback=130 == total=223"
       },
       {
         "check": "gate_diario_existe",
@@ -14889,7 +14914,7 @@
       {
         "check": "gate_stale_monotono",
         "passed": true,
-        "nota": "Monotónico: 7+d=268 >= 14+d=245 >= 30+d=219"
+        "nota": "Monotónico: 7+d=270 >= 14+d=249 >= 30+d=223"
       },
       {
         "check": "gate_reclutadoras_muestra_campo_existe",
@@ -14914,7 +14939,7 @@
       {
         "check": "gate_3c_diario_fechas_correctas",
         "passed": true,
-        "nota": "diario[0]=2026-09-30 diario[-1]=2026-10-29"
+        "nota": "diario[0]=2026-10-01 diario[-1]=2026-10-30"
       },
       {
         "check": "gate_3c_alertas_incidencias_campo",
@@ -14929,7 +14954,7 @@
       {
         "check": "gate_3c_unicos_lte_incidencias",
         "passed": true,
-        "nota": "candidatos_unicos=234 <= incidencias_totales=348"
+        "nota": "candidatos_unicos=234 <= incidencias_totales=349"
       },
       {
         "check": "gate_3c_meta_periodo_definicion",
@@ -14969,22 +14994,22 @@
       {
         "check": "gate_4a_entregados_lte_total",
         "passed": true,
-        "nota": "entregados=602 <= total=806"
+        "nota": "entregados=602 <= total=808"
       },
       {
         "check": "gate_4a_incorporados_lte_entregados",
         "passed": true,
-        "nota": "incorporados=356 <= entregados=602"
+        "nota": "incorporados=357 <= entregados=602"
       },
       {
         "check": "gate_4a_tasa_entrega_valid",
         "passed": true,
-        "nota": "tasa_entrega=74.7"
+        "nota": "tasa_entrega=74.5"
       },
       {
         "check": "gate_4a_geo_state_sum",
         "passed": true,
-        "nota": "geo_state_sum=802 == apps_with_job=802"
+        "nota": "geo_state_sum=804 == apps_with_job=804"
       },
       {
         "check": "gate_4a_jerarquia_nonempty",
@@ -15009,7 +15034,7 @@
       {
         "check": "gate_4b_tasa_finalizada_gte_base",
         "passed": true,
-        "nota": "tasa_inc_finalizada=69.8 >= tasa_inc_base=59.1"
+        "nota": "tasa_inc_finalizada=69.9 >= tasa_inc_base=59.3"
       },
       {
         "check": "gate_4b_meta_atrib_por_vacante",
@@ -15019,7 +15044,7 @@
       {
         "check": "gate_4b_pending_sent_eq_stage",
         "passed": true,
-        "nota": "pending_decision_sent=92 == stage_sent_count=92"
+        "nota": "pending_decision_sent=91 == stage_sent_count=91"
       },
       {
         "check": "gate_4b_schema_version",
@@ -15029,47 +15054,47 @@
       {
         "check": "gate_4c_apps_anonimas",
         "passed": true,
-        "nota": "apps_anonimas.registros=806 == apps=806"
+        "nota": "apps_anonimas.registros=808 == apps=808"
       },
       {
         "check": "gate_aging_30_lte_14",
         "passed": true,
-        "nota": "30+d=219 <= 14+d=245"
+        "nota": "30+d=223 <= 14+d=249"
       },
       {
         "check": "gate_aging_14_lte_7",
         "passed": true,
-        "nota": "14+d=245 <= 7+d=268"
+        "nota": "14+d=249 <= 7+d=270"
       },
       {
         "check": "gate_aging_7_lte_active",
         "passed": true,
-        "nota": "7+d=268 <= active=296"
+        "nota": "7+d=270 <= active=297"
       },
       {
         "check": "gate_age_buckets_sum_eq_active",
         "passed": true,
-        "nota": "sum_buckets=296 == active=296"
+        "nota": "sum_buckets=297 == active=297"
       },
       {
         "check": "gate_eligible_60_lte_30",
         "passed": true,
-        "nota": "eligible_60d=604 <= eligible_30d=710"
+        "nota": "eligible_60d=604 <= eligible_30d=717"
       },
       {
         "check": "gate_eligible_30_lte_14",
         "passed": true,
-        "nota": "eligible_30d=710 <= eligible_14d=750"
+        "nota": "eligible_30d=717 <= eligible_14d=755"
       },
       {
         "check": "gate_eligible_14_lte_7",
         "passed": true,
-        "nota": "eligible_14d=750 <= eligible_7d=779"
+        "nota": "eligible_14d=755 <= eligible_7d=781"
       },
       {
         "check": "gate_eligible_7_lte_total",
         "passed": true,
-        "nota": "eligible_7d=779 <= total=806"
+        "nota": "eligible_7d=781 <= total=808"
       },
       {
         "check": "gate_conv_lte_eligible",
@@ -15079,22 +15104,22 @@
       {
         "check": "gate_starts_7_lte_30",
         "passed": true,
-        "nota": "starts_7d=6 <= starts_30d=27"
+        "nota": "starts_7d=7 <= starts_30d=26"
       },
       {
         "check": "gate_starts_30_lte_60",
         "passed": true,
-        "nota": "starts_30d=27 <= starts_60d=53"
+        "nota": "starts_30d=26 <= starts_60d=54"
       },
       {
         "check": "gate_starts_60_lte_90",
         "passed": true,
-        "nota": "starts_60d=53 <= starts_90d=72"
+        "nota": "starts_60d=54 <= starts_90d=72"
       },
       {
         "check": "gate_starts_90_lte_hist",
         "passed": true,
-        "nota": "starts_90d=72 <= hist=385"
+        "nota": "starts_90d=72 <= hist=386"
       },
       {
         "check": "gate_recruiter_ids_unique",
@@ -15114,22 +15139,22 @@
       {
         "check": "gate_6a_stage_sum_eq_total",
         "passed": true,
-        "nota": "sum(stages)=806 == total_apps=806"
+        "nota": "sum(stages)=808 == total_apps=808"
       },
       {
         "check": "gate_6a_pipeline_active_sum",
         "passed": true,
-        "nota": "new+contacting+interview+sent=296 == total_activo=296"
+        "nota": "new+contacting+interview+sent=297 == total_activo=297"
       },
       {
         "check": "gate_6a_tasa_colocacion_formula",
         "passed": true,
-        "nota": "recalc=59.1% vs reportado=59.1% (delta=0.00%)"
+        "nota": "recalc=59.3% vs reportado=59.3% (delta=0.00%)"
       },
       {
         "check": "gate_6a_sin_fuente_pct",
         "passed": true,
-        "nota": "sin_fuente=115 (14.3%) < 20% del total"
+        "nota": "sin_fuente=115 (14.2%) < 20% del total"
       },
       {
         "check": "gate_6a_no_hardcoded_credentials",
@@ -15139,12 +15164,12 @@
       {
         "check": "gate_6a_working_fi_coverage",
         "passed": true,
-        "nota": "353/356 working apps con fi válido (99.2%). Faltantes: 3 (incluye fechas corruptas + null)"
+        "nota": "354/357 working apps con fi válido (99.2%). Faltantes: 3 (incluye fechas corruptas + null)"
       },
       {
         "check": "gate_6a_recency_30d_lte_working",
         "passed": true,
-        "nota": "recency_30d=27 <= working_total=356"
+        "nota": "recency_30d=26 <= working_total=357"
       }
     ]
   }
