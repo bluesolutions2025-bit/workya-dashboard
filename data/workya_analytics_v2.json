@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-30T13:50:24Z",
+    "generated_at": "2026-10-31T13:17:20Z",
     "timezone": "UTC",
     "schema_version": "4.2.0",
     "data_range": {
@@ -8,8 +8,8 @@
       "last_app": "2026-10-30"
     },
     "source_counts": {
-      "applications": 808,
-      "activity_logs": 2472,
+      "applications": 815,
+      "activity_logs": 2474,
       "jobs": 69,
       "clients": 30,
       "meta_ad_daily": 188
@@ -22,69 +22,69 @@
     ]
   },
   "resumen_ejecutivo": {
-    "total_historico": 808,
+    "total_historico": 815,
     "working_stage_total": 357,
     "ingresos_con_fecha_total": 386,
     "kpis_conversion": {
-      "presentados_cliente_total": 602,
-      "pending_decision_sent": 91,
+      "presentados_cliente_total": 604,
+      "pending_decision_sent": 93,
       "presentados_finalizados": 511,
-      "tasa_presentacion_pct": 74.5,
+      "tasa_presentacion_pct": 74.1,
       "incorporados_total": 357,
-      "tasa_incorporacion_pct": 59.3,
+      "tasa_incorporacion_pct": 59.1,
       "tasa_incorporacion_finalizada_pct": 69.9,
       "nota_metodologia": "Presentados = snapshot etapa_actual in {sent,working,not_arriving,not_selected}. NO es conteo histórico de eventos de entrega — usa etapa actual como proxy. tasa_incorporacion incluye 'sent' pendientes; tasa_incorporacion_finalizada los excluye.",
       "nota_cobertura_stage_history": "stage_history cubre ~75.7% de apps. 3 apps están en etapas activas pero previamente pasaron por 'sent' (no contadas — impacto negligible)."
     },
     "periodos": {
       "7d": {
-        "nuevos_aplicantes": 27,
-        "pipeline_activo": 297,
+        "nuevos_aplicantes": 30,
+        "pipeline_activo": 304,
         "ingresos_con_fecha": 7,
         "not_selected": 0,
         "not_arriving": 0,
-        "sin_owner": 3,
-        "sin_fuente": 22,
+        "sin_owner": 7,
+        "sin_fuente": 25,
         "sin_job": 0
       },
       "30d": {
-        "nuevos_aplicantes": 91,
-        "pipeline_activo": 297,
-        "ingresos_con_fecha": 26,
+        "nuevos_aplicantes": 97,
+        "pipeline_activo": 304,
+        "ingresos_con_fecha": 25,
         "not_selected": 1,
         "not_arriving": 4,
-        "sin_owner": 8,
-        "sin_fuente": 56,
+        "sin_owner": 12,
+        "sin_fuente": 60,
         "sin_job": 0
       },
       "60d": {
-        "nuevos_aplicantes": 204,
-        "pipeline_activo": 297,
+        "nuevos_aplicantes": 205,
+        "pipeline_activo": 304,
         "ingresos_con_fecha": 54,
         "not_selected": 3,
         "not_arriving": 7,
-        "sin_owner": 9,
-        "sin_fuente": 92,
+        "sin_owner": 13,
+        "sin_fuente": 96,
         "sin_job": 0
       },
       "90d": {
-        "nuevos_aplicantes": 255,
-        "pipeline_activo": 297,
+        "nuevos_aplicantes": 262,
+        "pipeline_activo": 304,
         "ingresos_con_fecha": 72,
         "not_selected": 3,
         "not_arriving": 11,
-        "sin_owner": 9,
-        "sin_fuente": 104,
+        "sin_owner": 13,
+        "sin_fuente": 108,
         "sin_job": 0
       },
       "historico": {
-        "nuevos_aplicantes": 808,
-        "pipeline_activo": 297,
+        "nuevos_aplicantes": 815,
+        "pipeline_activo": 304,
         "ingresos_con_fecha": 386,
         "not_selected": 74,
         "not_arriving": 80,
-        "sin_owner": 9,
-        "sin_fuente": 115,
+        "sin_owner": 13,
+        "sin_fuente": 119,
         "sin_job": 2
       }
     }
@@ -96,9 +96,9 @@
     "A_minus_B_working_sin_fecha": 3,
     "B_minus_A_fecha_sin_working": 32,
     "B_minus_A_por_stage": {
+      "sent": 17,
       "not_arriving": 13,
-      "new": 2,
-      "sent": 17
+      "new": 2
     },
     "fechas_futuras_excluidas": 1,
     "nota": "A∩B son placements confirmados con fecha. A-B son working sin fecha de inicio (no se puede asignar a período). B-A son inconsistencias de calidad: tienen fecha de inicio pero stage incorrecto."
@@ -107,10 +107,6 @@
     "nota": "aplicantes usa created_at; ingresos usa started_working_at. NUNCA mezclados.",
     "diario": {
       "aplicantes": [
-        {
-          "fecha": "2026-10-01",
-          "total": 1
-        },
         {
           "fecha": "2026-10-02",
           "total": 3
@@ -225,14 +221,14 @@
         },
         {
           "fecha": "2026-10-30",
-          "total": 1
+          "total": 8
+        },
+        {
+          "fecha": "2026-10-31",
+          "total": 0
         }
       ],
       "ingresos": [
-        {
-          "fecha": "2026-10-01",
-          "total": 1
-        },
         {
           "fecha": "2026-10-02",
           "total": 0
@@ -348,10 +344,14 @@
         {
           "fecha": "2026-10-30",
           "total": 0
+        },
+        {
+          "fecha": "2026-10-31",
+          "total": 0
         }
       ],
-      "dias_con_actividad_apps": 26,
-      "dias_con_actividad_ingresos": 13,
+      "dias_con_actividad_apps": 25,
+      "dias_con_actividad_ingresos": 12,
       "nota": "30 días calendario completos — días sin actividad incluidos como 0."
     },
     "semanal": {
@@ -546,7 +546,7 @@
         },
         {
           "semana": "2026-W44",
-          "total": 19
+          "total": 26
         }
       ],
       "ingresos": [
@@ -788,7 +788,7 @@
         },
         {
           "mes": "2026-10",
-          "total": 91
+          "total": 98
         }
       ],
       "ingresos": [
@@ -847,10 +847,10 @@
     "nota": "Funnel reconstruido desde activity_logs (stage_change events). started_working_at se usa para la llegada a 'working' cuando está disponible. Etapas legacy (selected, rejected) están mapeadas en calidad_datos.",
     "stage_mapping": {
       "activo": [
-        "interview",
         "new",
-        "sent",
-        "contacting"
+        "contacting",
+        "interview",
+        "sent"
       ],
       "positivo": [
         "working"
@@ -860,10 +860,10 @@
         "not_arriving"
       ],
       "legacy": [
-        "in_process",
         "rejected",
-        "reviewing",
-        "selected"
+        "selected",
+        "in_process",
+        "reviewing"
       ]
     },
     "transiciones": [
@@ -872,7 +872,7 @@
         "from_stage": "new",
         "to_stage": "contacting",
         "candidatos_con_ambas_fechas": 17,
-        "alcanzaron_from": 808,
+        "alcanzaron_from": 815,
         "alcanzaron_to": 17,
         "conversion": 2.1,
         "mediana_dias": 6,
@@ -898,9 +898,9 @@
         "from_stage": "new",
         "to_stage": "interview",
         "candidatos_con_ambas_fechas": 142,
-        "alcanzaron_from": 808,
+        "alcanzaron_from": 815,
         "alcanzaron_to": 142,
-        "conversion": 17.6,
+        "conversion": 17.4,
         "mediana_dias": 2.0,
         "promedio_dias": 9.3,
         "cobertura_suficiente": true,
@@ -939,48 +939,48 @@
     "kpi_tasa_colocacion_30d": {
       "valor": 40.0,
       "numerador": 287,
-      "denominador": 717,
-      "too_recent": 91,
+      "denominador": 718,
+      "too_recent": 97,
       "sin_created_at": 0,
       "label": "Tasa de Colocación a 30 Días",
-      "nota": "91 candidatos excluidos — creados hace <30 días."
+      "nota": "97 candidatos excluidos — creados hace <30 días."
     },
     "kpi_por_ventana": {
       "7d": {
         "valor": 20.1,
-        "numerador": 157,
-        "denominador": 781,
-        "too_recent": 27,
+        "numerador": 158,
+        "denominador": 785,
+        "too_recent": 30,
         "sin_created_at": 0,
         "label": "Tasa de Colocación a 7 Días",
-        "nota": "27 candidatos excluidos — creados hace <7 días."
+        "nota": "30 candidatos excluidos — creados hace <7 días."
       },
       "14d": {
         "valor": 30.3,
-        "numerador": 229,
-        "denominador": 755,
-        "too_recent": 53,
+        "numerador": 230,
+        "denominador": 760,
+        "too_recent": 55,
         "sin_created_at": 0,
         "label": "Tasa de Colocación a 14 Días",
-        "nota": "53 candidatos excluidos — creados hace <14 días."
+        "nota": "55 candidatos excluidos — creados hace <14 días."
       },
       "30d": {
         "valor": 40.0,
         "numerador": 287,
-        "denominador": 717,
-        "too_recent": 91,
+        "denominador": 718,
+        "too_recent": 97,
         "sin_created_at": 0,
         "label": "Tasa de Colocación a 30 Días",
-        "nota": "91 candidatos excluidos — creados hace <30 días."
+        "nota": "97 candidatos excluidos — creados hace <30 días."
       },
       "60d": {
-        "valor": 47.8,
-        "numerador": 289,
-        "denominador": 604,
-        "too_recent": 204,
+        "valor": 47.7,
+        "numerador": 291,
+        "denominador": 610,
+        "too_recent": 205,
         "sin_created_at": 0,
         "label": "Tasa de Colocación a 60 Días",
-        "nota": "204 candidatos excluidos — creados hace <60 días."
+        "nota": "205 candidatos excluidos — creados hace <60 días."
       }
     },
     "por_cohorte": [
@@ -1327,11 +1327,11 @@
           },
           "60d": {
             "label": "Conversión 60 días",
-            "eligible": 51,
-            "too_recent": 6,
-            "convertidos": 13,
-            "tasa": 25.5,
-            "nota": "6 candidatos excluidos — ventana de 60d aún abierta"
+            "eligible": 57,
+            "too_recent": 0,
+            "convertidos": 15,
+            "tasa": 26.3,
+            "nota": null
           }
         }
       },
@@ -1376,54 +1376,54 @@
       },
       {
         "cohorte": "2026-10",
-        "total_aplicantes": 91,
+        "total_aplicantes": 98,
         "muestra_suficiente": true,
         "ventanas": {
           "7d": {
             "label": "Conversión 7 días",
-            "eligible": 64,
-            "too_recent": 27,
-            "convertidos": 6,
-            "tasa": 9.4,
-            "nota": "27 candidatos excluidos — ventana de 7d aún abierta"
+            "eligible": 68,
+            "too_recent": 30,
+            "convertidos": 7,
+            "tasa": 10.3,
+            "nota": "30 candidatos excluidos — ventana de 7d aún abierta"
           },
           "14d": {
             "label": "Conversión 14 días",
-            "eligible": 38,
-            "too_recent": 53,
-            "convertidos": 9,
-            "tasa": 23.7,
-            "nota": "53 candidatos excluidos — ventana de 14d aún abierta"
+            "eligible": 43,
+            "too_recent": 55,
+            "convertidos": 10,
+            "tasa": 23.3,
+            "nota": "55 candidatos excluidos — ventana de 14d aún abierta"
           },
           "30d": {
             "label": "Conversión 30 días",
-            "eligible": 0,
-            "too_recent": 91,
+            "eligible": 1,
+            "too_recent": 97,
             "convertidos": 0,
             "tasa": null,
-            "nota": "91 candidatos excluidos — ventana de 30d aún abierta"
+            "nota": "97 candidatos excluidos — ventana de 30d aún abierta"
           },
           "60d": {
             "label": "Conversión 60 días",
             "eligible": 0,
-            "too_recent": 91,
+            "too_recent": 98,
             "convertidos": 0,
             "tasa": null,
-            "nota": "91 candidatos excluidos — ventana de 60d aún abierta"
+            "nota": "98 candidatos excluidos — ventana de 60d aún abierta"
           }
         }
       }
     ]
   },
   "pipeline": {
-    "total_activo": 297,
+    "total_activo": 304,
     "total_working": 357,
     "total_cerrado_negativo": 154,
     "por_stage": {
-      "interview": 95,
-      "new": 108,
-      "sent": 91,
+      "new": 113,
       "contacting": 3,
+      "interview": 95,
+      "sent": 93,
       "working": 357,
       "not_selected": 74,
       "not_arriving": 80
@@ -1431,7 +1431,7 @@
     "por_reclutadora": {
       "14e15932-1b87-4548-86a7-8af284db93ef": {
         "nombre_display": "Dora",
-        "activo": 118,
+        "activo": 121,
         "working": 319
       },
       "280fbee7-41ac-4c64-9820-bc587bcc47c6": {
@@ -1457,45 +1457,45 @@
     },
     "aging_desde_creacion": {
       "0-1d": 9,
-      "2-3d": 9,
-      "4-7d": 9,
-      "8-14d": 23,
-      "15-30d": 26,
-      "30+d": 221
+      "2-3d": 13,
+      "4-7d": 10,
+      "8-14d": 22,
+      "15-30d": 24,
+      "30+d": 226
     },
     "aging_desde_ultimo_cambio_stage": {
       "0-1d": 9,
-      "2-3d": 9,
-      "4-7d": 11,
-      "8-14d": 23,
+      "2-3d": 13,
+      "4-7d": 12,
+      "8-14d": 21,
       "15-30d": 26,
-      "30+d": 219
+      "30+d": 223
     },
     "aging_sin_fecha": 0,
-    "aging_nota": "aging_desde_ultimo_cambio_stage usa last stage_change de activity_logs; si no hay log, usa created_at como proxy. sum(buckets) + aging_sin_fecha = 297 (debe = total_activo).",
+    "aging_nota": "aging_desde_ultimo_cambio_stage usa last stage_change de activity_logs; si no hay log, usa created_at como proxy. sum(buckets) + aging_sin_fecha = 304 (debe = total_activo).",
     "pipeline_estancado": {
       "7+d": {
-        "cantidad": 270,
-        "pct": 90.9
+        "cantidad": 273,
+        "pct": 89.8
       },
       "14+d": {
-        "cantidad": 249,
-        "pct": 83.8
+        "cantidad": 253,
+        "pct": 83.2
       },
       "30+d": {
-        "cantidad": 223,
-        "pct": 75.1,
+        "cantidad": 224,
+        "pct": 73.7,
         "con_log": 93,
-        "fallback_created_at": 130,
-        "nota_diferencia": "De los 223 estancados >30d: 93 tienen stage_change log confirmado; 130 usan created_at como proxy (sin stage_change log). La alerta pipeline_30d_plus solo cuenta los 93 con log confirmado."
+        "fallback_created_at": 131,
+        "nota_diferencia": "De los 224 estancados >30d: 93 tienen stage_change log confirmado; 131 usan created_at como proxy (sin stage_change log). La alerta pipeline_30d_plus solo cuenta los 93 con log confirmado."
       }
     },
     "pipeline_estancado_por_reclutadora": {
       "14e15932-1b87-4548-86a7-8af284db93ef": {
         "nombre_display": "Dora",
-        "activo_total": 118,
-        "estancado_30d": 94,
-        "pct_estancado": 79.7
+        "activo_total": 121,
+        "estancado_30d": 95,
+        "pct_estancado": 78.5
       },
       "adea7407-657f-4cee-83a6-5d4447e51ceb": {
         "nombre_display": "Director",
@@ -1536,14 +1536,14 @@
     "pct_sin_fecha": 0.8,
     "por_periodo": {
       "7d": 7,
-      "30d": 26,
+      "30d": 25,
       "60d": 54,
       "90d": 72,
       "historico_90d_mas": 314
     },
     "por_periodo_activo": {
       "7d": 7,
-      "30d": 24,
+      "30d": 23,
       "60d": 52,
       "90d": 68
     },
@@ -1559,16 +1559,16 @@
       "roster_actual": true,
       "incorporacion": "2026-03-01",
       "primera_actividad": "2026-03-05",
-      "ultima_actividad": "2026-10-30",
-      "cartera_total": 553,
-      "pipeline_activo": 118,
+      "ultima_actividad": "2026-10-31",
+      "cartera_total": 556,
+      "pipeline_activo": 121,
       "working_asignado": 319,
       "not_selected": 46,
       "not_arriving": 70,
       "periodo_30d": {
-        "apps_tocadas": 49,
+        "apps_tocadas": 51,
         "cambios_stage": 13,
-        "total_acciones": 69,
+        "total_acciones": 70,
         "entrevistas_30d": 4,
         "enviados_30d": 0,
         "ingresos_30d": 21
@@ -1580,15 +1580,15 @@
       },
       "performance": {
         "tasa_colocacion_30d": {
-          "valor": 57.5,
+          "valor": 57.4,
           "numerador": 295,
-          "denominador": 513,
+          "denominador": 514,
           "muestra_suficiente": true,
           "muestra_minima": 15,
           "nota": null
         },
         "mediana_dias_hasta_ingreso": 9.0,
-        "not_arriving_rate": 12.7
+        "not_arriving_rate": 12.6
       }
     },
     "280fbee7-41ac-4c64-9820-bc587bcc47c6": {
@@ -1606,16 +1606,16 @@
       "not_selected": 28,
       "not_arriving": 9,
       "periodo_30d": {
-        "apps_tocadas": 46,
+        "apps_tocadas": 44,
         "cambios_stage": 4,
-        "total_acciones": 65,
+        "total_acciones": 63,
         "entrevistas_30d": 4,
         "enviados_30d": 0,
-        "ingresos_30d": 1
+        "ingresos_30d": 0
       },
       "recencia_ingresos": {
         "7d": 0,
-        "30d": 1,
+        "30d": 0,
         "60d": 8
       },
       "performance": {
@@ -1760,16 +1760,16 @@
         "canal": "reclutadora",
         "label": "Reclutadora (Dora)",
         "tipo": "interno",
-        "aplicantes": 441,
-        "activos": 84,
+        "aplicantes": 443,
+        "activos": 86,
         "working": 269,
         "not_arriving": 63,
         "not_selected": 25,
         "mediana_dias_hasta_ingreso": 9.0,
         "tasa_colocacion_30d": {
-          "valor": 60.0,
+          "valor": 59.9,
           "numerador": 249,
-          "denominador": 415,
+          "denominador": 416,
           "muestra_suficiente": true
         }
       },
@@ -1777,8 +1777,8 @@
         "canal": "sin_fuente",
         "label": "Sin fuente",
         "tipo": "desconocido",
-        "aplicantes": 115,
-        "activos": 111,
+        "aplicantes": 119,
+        "activos": 115,
         "working": 4,
         "not_arriving": 0,
         "not_selected": 0,
@@ -1794,8 +1794,8 @@
         "canal": "meta_pagado",
         "label": "Meta Ads (Pago)",
         "tipo": "pago",
-        "aplicantes": 108,
-        "activos": 52,
+        "aplicantes": 109,
+        "activos": 53,
         "working": 12,
         "not_arriving": 6,
         "not_selected": 38,
@@ -1880,9 +1880,9 @@
   "clientes": {
     "nota": "applications.client_id = 0% cobertura. Vinculación via sent_to (texto libre). Solo variantes de alta confianza fueron normalizadas. Fill Rate NO calculado — sin Headcount solicitado confiable.",
     "cobertura": {
-      "apps_con_cliente": 552,
-      "apps_sin_cliente": 256,
-      "pct_cobertura": 68.3
+      "apps_con_cliente": 554,
+      "apps_sin_cliente": 261,
+      "pct_cobertura": 68.0
     },
     "normalizacion": {
       "variantes_mapeadas": {
@@ -1975,11 +1975,11 @@
         "variantes_raw": [
           "MAUNA LANI - HAWAI"
         ],
-        "total": 40,
-        "ultimos_30d": 1,
-        "ultimos_60d": 6,
-        "ultimos_90d": 7,
-        "activos": 8,
+        "total": 41,
+        "ultimos_30d": 2,
+        "ultimos_60d": 7,
+        "ultimos_90d": 8,
+        "activos": 9,
         "working": 27,
         "not_arriving": 4,
         "not_selected": 1,
@@ -2108,6 +2108,21 @@
         "estado_actividad": "activo"
       },
       {
+        "nombre": "CLIFF HOUSE",
+        "variantes_raw": [
+          "CLIFF HOUSE"
+        ],
+        "total": 9,
+        "ultimos_30d": 9,
+        "ultimos_60d": 9,
+        "ultimos_90d": 9,
+        "activos": 5,
+        "working": 2,
+        "not_arriving": 2,
+        "not_selected": 0,
+        "estado_actividad": "activo"
+      },
+      {
         "nombre": "GREATWOLF CONCORD NORTH CAROLINA",
         "variantes_raw": [
           "GREATWOLF CONCORD NORTH CAROLINA"
@@ -2119,21 +2134,6 @@
         "activos": 6,
         "working": 2,
         "not_arriving": 0,
-        "not_selected": 0,
-        "estado_actividad": "activo"
-      },
-      {
-        "nombre": "CLIFF HOUSE",
-        "variantes_raw": [
-          "CLIFF HOUSE"
-        ],
-        "total": 8,
-        "ultimos_30d": 8,
-        "ultimos_60d": 8,
-        "ultimos_90d": 8,
-        "activos": 4,
-        "working": 2,
-        "not_arriving": 2,
         "not_selected": 0,
         "estado_actividad": "activo"
       },
@@ -2174,7 +2174,7 @@
           "TOWNPLACE SUITES HICKORY NC"
         ],
         "total": 6,
-        "ultimos_30d": 4,
+        "ultimos_30d": 1,
         "ultimos_60d": 6,
         "ultimos_90d": 6,
         "activos": 4,
@@ -2189,7 +2189,7 @@
           "GREATWOLF TENNERSVILLE PENSILVANIA"
         ],
         "total": 4,
-        "ultimos_30d": 3,
+        "ultimos_30d": 1,
         "ultimos_60d": 4,
         "ultimos_90d": 4,
         "activos": 1,
@@ -2288,11 +2288,11 @@
         "categoria": "housekeeping",
         "ciudad": "Wisconsin Dells",
         "estado_us": "Wisconsin",
-        "total": 101,
-        "activos": 47,
+        "total": 103,
+        "activos": 49,
         "working": 38,
         "not_arriving": 10,
-        "ultimos_30d": 9,
+        "ultimos_30d": 10,
         "tasa_30d": 48.4
       },
       {
@@ -2340,11 +2340,11 @@
         "categoria": "housekeeping",
         "ciudad": "Big Island",
         "estado_us": "Hawaii",
-        "total": 36,
-        "activos": 13,
+        "total": 38,
+        "activos": 15,
         "working": 19,
         "not_arriving": 0,
-        "ultimos_30d": 3,
+        "ultimos_30d": 5,
         "tasa_30d": 60.6
       },
       {
@@ -2397,7 +2397,7 @@
         "working": 16,
         "not_arriving": 0,
         "ultimos_30d": 4,
-        "tasa_30d": 84.2
+        "tasa_30d": 80.0
       },
       {
         "job_id": "5521d88b-5dba-4619-81aa-5c6999342e63",
@@ -2431,11 +2431,11 @@
         "categoria": "housekeeping",
         "ciudad": "Concord",
         "estado_us": "North Carolina",
-        "total": 20,
-        "activos": 17,
+        "total": 21,
+        "activos": 18,
         "working": 3,
         "not_arriving": 0,
-        "ultimos_30d": 20,
+        "ultimos_30d": 21,
         "tasa_30d": null
       },
       {
@@ -2461,7 +2461,7 @@
         "activos": 3,
         "working": 9,
         "not_arriving": 4,
-        "ultimos_30d": 1,
+        "ultimos_30d": 0,
         "tasa_30d": 56.2
       },
       {
@@ -2560,8 +2560,8 @@
       },
       {
         "estado": "Wisconsin",
-        "total": 136,
-        "activos": 63,
+        "total": 138,
+        "activos": 65,
         "working": 54,
         "not_arriving": 13,
         "not_selected": 6,
@@ -2570,8 +2570,8 @@
       },
       {
         "estado": "Hawaii",
-        "total": 74,
-        "activos": 29,
+        "total": 76,
+        "activos": 31,
         "working": 35,
         "not_arriving": 4,
         "not_selected": 6,
@@ -2580,8 +2580,8 @@
       },
       {
         "estado": "Ohio",
-        "total": 63,
-        "activos": 19,
+        "total": 64,
+        "activos": 20,
         "working": 41,
         "not_arriving": 2,
         "not_selected": 1,
@@ -2620,8 +2620,8 @@
       },
       {
         "estado": "North Carolina",
-        "total": 37,
-        "activos": 29,
+        "total": 38,
+        "activos": 30,
         "working": 8,
         "not_arriving": 0,
         "not_selected": 0,
@@ -2650,8 +2650,8 @@
       },
       {
         "estado": "Maine",
-        "total": 25,
-        "activos": 8,
+        "total": 26,
+        "activos": 9,
         "working": 9,
         "not_arriving": 6,
         "not_selected": 2,
@@ -2711,8 +2711,8 @@
       {
         "ciudad": "Wisconsin Dells",
         "estado": "Wisconsin",
-        "total": 136,
-        "activos": 63,
+        "total": 138,
+        "activos": 65,
         "working": 54,
         "not_arriving": 13
       },
@@ -2727,16 +2727,16 @@
       {
         "ciudad": "Sandusky",
         "estado": "Ohio",
-        "total": 63,
-        "activos": 19,
+        "total": 64,
+        "activos": 20,
         "working": 41,
         "not_arriving": 2
       },
       {
         "ciudad": "Big Island",
         "estado": "Hawaii",
-        "total": 58,
-        "activos": 20,
+        "total": 60,
+        "activos": 22,
         "working": 29,
         "not_arriving": 4
       },
@@ -2759,8 +2759,8 @@
       {
         "ciudad": "Concord",
         "estado": "North Carolina",
-        "total": 24,
-        "activos": 21,
+        "total": 25,
+        "activos": 22,
         "working": 3,
         "not_arriving": 0
       },
@@ -2823,8 +2823,8 @@
       {
         "ciudad": "Cape Neddick",
         "estado": "Maine",
-        "total": 8,
-        "activos": 4,
+        "total": 9,
+        "activos": 5,
         "working": 2,
         "not_arriving": 2
       },
@@ -2864,7 +2864,7 @@
   },
   "jerarquia": {
     "nota": "Relación cliente→vacante reconstruida por aplicante (sent_to × job_id). Un aplicante puede vincularse a múltiples clientes. Cobertura: apps con sent_to definido.",
-    "apps_con_cliente_vinculado": 552,
+    "apps_con_cliente_vinculado": 554,
     "por_cliente": [
       {
         "cliente": "GREATWOLF THE LODGE PA",
@@ -3298,8 +3298,8 @@
       {
         "cliente": "MAUNA LANI - HAWAI",
         "vacantes_count": 5,
-        "total": 40,
-        "activos": 8,
+        "total": 41,
+        "activos": 9,
         "working": 27,
         "not_arriving": 4,
         "not_selected": 1,
@@ -3309,8 +3309,8 @@
             "titulo": "HOSEKEEPING: HOUSEMAN (Housing+Transportation included)",
             "ciudad": "Big Island",
             "estado": "Hawaii",
-            "total": 21,
-            "activos": 3,
+            "total": 22,
+            "activos": 4,
             "working": 17,
             "not_arriving": 0,
             "not_selected": 1
@@ -4077,6 +4077,50 @@
         ]
       },
       {
+        "cliente": "CLIFF HOUSE",
+        "vacantes_count": 3,
+        "total": 9,
+        "activos": 5,
+        "working": 2,
+        "not_arriving": 2,
+        "not_selected": 0,
+        "vacantes": [
+          {
+            "job_id": "a7924dce-eba2-49ab-8ab2-ba11b4f3803b",
+            "titulo": "HOUSEKEEPING: ROOM ATTENDANT",
+            "ciudad": "Cape Neddick",
+            "estado": "Maine",
+            "total": 5,
+            "activos": 2,
+            "working": 1,
+            "not_arriving": 2,
+            "not_selected": 0
+          },
+          {
+            "job_id": "3ac95d4c-7032-40ca-ad67-70b6f7f824e2",
+            "titulo": "KITCHEN: PRE-COOK LINE-COOK",
+            "ciudad": "Cape Neddick",
+            "estado": "Maine",
+            "total": 3,
+            "activos": 2,
+            "working": 1,
+            "not_arriving": 0,
+            "not_selected": 0
+          },
+          {
+            "job_id": "3f763dc7-10a2-4f4b-8ac8-983a9dacb05f",
+            "titulo": "FRONT OF DE HOUSE: BUSSER",
+            "ciudad": "Lake Placid",
+            "estado": "New York",
+            "total": 1,
+            "activos": 1,
+            "working": 0,
+            "not_arriving": 0,
+            "not_selected": 0
+          }
+        ]
+      },
+      {
         "cliente": "GREATWOLF CONCORD NORTH CAROLINA",
         "vacantes_count": 2,
         "total": 8,
@@ -4103,50 +4147,6 @@
             "estado": "North Carolina",
             "total": 3,
             "activos": 3,
-            "working": 0,
-            "not_arriving": 0,
-            "not_selected": 0
-          }
-        ]
-      },
-      {
-        "cliente": "CLIFF HOUSE",
-        "vacantes_count": 3,
-        "total": 8,
-        "activos": 4,
-        "working": 2,
-        "not_arriving": 2,
-        "not_selected": 0,
-        "vacantes": [
-          {
-            "job_id": "a7924dce-eba2-49ab-8ab2-ba11b4f3803b",
-            "titulo": "HOUSEKEEPING: ROOM ATTENDANT",
-            "ciudad": "Cape Neddick",
-            "estado": "Maine",
-            "total": 4,
-            "activos": 1,
-            "working": 1,
-            "not_arriving": 2,
-            "not_selected": 0
-          },
-          {
-            "job_id": "3ac95d4c-7032-40ca-ad67-70b6f7f824e2",
-            "titulo": "KITCHEN: PRE-COOK LINE-COOK",
-            "ciudad": "Cape Neddick",
-            "estado": "Maine",
-            "total": 3,
-            "activos": 2,
-            "working": 1,
-            "not_arriving": 0,
-            "not_selected": 0
-          },
-          {
-            "job_id": "3f763dc7-10a2-4f4b-8ac8-983a9dacb05f",
-            "titulo": "FRONT OF DE HOUSE: BUSSER",
-            "ciudad": "Lake Placid",
-            "estado": "New York",
-            "total": 1,
-            "activos": 1,
             "working": 0,
             "not_arriving": 0,
             "not_selected": 0
@@ -4455,12 +4455,12 @@
   "productividad": {
     "nota": "Productividad y eficiencia por reclutadora y fuente de captación.",
     "kpis_conversion": {
-      "total_aplicantes": 808,
-      "presentados_cliente_total": 602,
-      "pending_decision_sent": 91,
-      "tasa_presentacion_pct": 74.5,
+      "total_aplicantes": 815,
+      "presentados_cliente_total": 604,
+      "pending_decision_sent": 93,
+      "tasa_presentacion_pct": 74.1,
       "incorporados_total": 357,
-      "tasa_incorporacion_pct": 59.3,
+      "tasa_incorporacion_pct": 59.1,
       "tasa_incorporacion_finalizada_pct": 69.9
     },
     "matriz_fuente_reclutadora": {
@@ -4485,31 +4485,31 @@
       "celdas": [
         {
           "fuente": "reclutadora",
-          "total": 441,
+          "total": 443,
           "por_reclutadora": {
-            "Dora": 424,
+            "Dora": 426,
             "Natallia": 9,
             "Sofia": 8
           }
         },
         {
           "fuente": "sin_fuente",
-          "total": 115,
+          "total": 119,
           "por_reclutadora": {
             "Ana Sofia": 7,
             "Director": 1,
             "Dora": 15,
             "Natallia": 10,
             "Sidivan": 20,
-            "Sin asignar": 8,
+            "Sin asignar": 12,
             "Sofia": 54
           }
         },
         {
           "fuente": "meta_pagado",
-          "total": 108,
+          "total": 109,
           "por_reclutadora": {
-            "Dora": 38,
+            "Dora": 39,
             "Sofia": 70
           }
         },
@@ -4551,7 +4551,7 @@
   },
   "apps_anonimas": {
     "nota_privacidad": "Sin datos personales identificables. Registros por aplicante sin nombres de candidatos, contacto ni información sensible del candidato. Campos incluidos: etapa pipeline, cliente, estado, ciudad, reclutadora, fuente, vacante y fechas agregadas.",
-    "total_registros": 808,
+    "total_registros": 815,
     "claves": {
       "e": "etapa",
       "c": "cliente",
@@ -4576,7 +4576,7 @@
       "new",
       "sent"
     ],
-    "fecha_generacion": "2026-10-30",
+    "fecha_generacion": "2026-10-31",
     "registros": [
       {
         "e": "not_selected",
@@ -4601,6 +4601,54 @@
         "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
         "fc": "2025-12-08",
         "fi": "2025-12-13"
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2025-12-08",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Maine",
+        "ci": "Kennebunk",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Line Cook",
+        "vi": "04933c25-04ae-4069-bb3d-c56332970fcc",
+        "fc": "2025-12-06",
+        "fi": "2025-12-08"
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2025-12-06",
+        "fi": null
+      },
+      {
+        "e": "sent",
+        "c": "MAUNA LANI - HAWAI",
+        "st": "Hawaii",
+        "ci": "Big Island",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Houseman (Housing+Transportation included)",
+        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
+        "fc": "2025-12-05",
+        "fi": "2025-12-17"
       },
       {
         "e": "working",
@@ -4628,210 +4676,6 @@
       },
       {
         "e": "working",
-        "c": "WILDERNESS",
-        "st": "Wisconsin",
-        "ci": "Wisconsin Dells",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "c0a98c6e-7c66-40fb-b6c3-ff6073852b5e",
-        "fc": "2026-02-23",
-        "fi": "2026-02-24"
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "meta_pagado",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-21",
-        "fi": null
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "meta_pagado",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-21",
-        "fi": null
-      },
-      {
-        "e": "not_arriving",
-        "c": "PATRIOT",
-        "st": "Maine",
-        "ci": "Kennebunk",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Line Cook",
-        "vi": "04933c25-04ae-4069-bb3d-c56332970fcc",
-        "fc": "2026-02-20",
-        "fi": null
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "meta_pagado",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-16",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Houseman",
-        "vi": "39323c5b-f691-4841-b852-81eb46ec9263",
-        "fc": "2026-02-14",
-        "fi": "2026-02-22"
-      },
-      {
-        "e": "working",
-        "c": "MAUNA LANI - HAWAI",
-        "st": "Hawaii",
-        "ci": "Big Island",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Houseman (Housing+Transportation included)",
-        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
-        "fc": "2026-02-12",
-        "fi": "2026-02-18"
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-12",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "OKANA RESORT",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-10",
-        "fi": "2026-02-12"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-10",
-        "fi": "2026-02-02"
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Oklahoma",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "DISHWASHER",
-        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
-        "fc": "2026-02-09",
-        "fi": "2026-02-13"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-08",
-        "fi": "2026-02-09"
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-07",
-        "fi": null
-      },
-      {
-        "e": "interview",
-        "c": null,
-        "st": "Oklahoma",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "DISHWASHER",
-        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
-        "fc": "2026-02-05",
-        "fi": null
-      },
-      {
-        "e": "not_arriving",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-05",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Maine",
-        "ci": "Kennebunk",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Line Cook",
-        "vi": "04933c25-04ae-4069-bb3d-c56332970fcc",
-        "fc": "2025-12-06",
-        "fi": "2025-12-08"
-      },
-      {
-        "e": "sent",
-        "c": "MAUNA LANI - HAWAI",
-        "st": "Hawaii",
-        "ci": "Big Island",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Houseman (Housing+Transportation included)",
-        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
-        "fc": "2025-12-05",
-        "fi": "2025-12-17"
-      },
-      {
-        "e": "working",
         "c": "GREATWOLF THE LODGE PA",
         "st": "Pennsylvania",
         "ci": "Mount Pocono",
@@ -4853,6 +4697,42 @@
         "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
         "fc": "2025-12-05",
         "fi": null
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2025-12-05",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "CAMELBACK",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Line Cook",
+        "vi": "9243597b-86cc-48df-a267-a7b9a6cf73b2",
+        "fc": "2025-12-04",
+        "fi": "2026-01-14"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Houseman",
+        "vi": "39323c5b-f691-4841-b852-81eb46ec9263",
+        "fc": "2025-12-04",
+        "fi": "2025-12-15"
       },
       {
         "e": "not_arriving",
@@ -4891,6 +4771,30 @@
         "fi": "2026-03-16"
       },
       {
+        "e": "not_arriving",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-24",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "Wisconsin",
+        "ci": "Wisconsin Dells",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "c0a98c6e-7c66-40fb-b6c3-ff6073852b5e",
+        "fc": "2026-02-23",
+        "fi": "2026-02-24"
+      },
+      {
         "e": "working",
         "c": "WILDERNESS",
         "st": "OK",
@@ -4901,6 +4805,42 @@
         "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
         "fc": "2026-02-23",
         "fi": "2026-04-13"
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "meta_pagado",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-21",
+        "fi": null
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "meta_pagado",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-21",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2026-02-21",
+        "fi": "2026-04-10"
       },
       {
         "e": "working",
@@ -4917,89 +4857,17 @@
       {
         "e": "not_selected",
         "c": null,
-        "st": "OK",
-        "ci": "Oklahoma City",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
         "r": "Dora",
         "f": "meta_pagado",
         "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-19",
-        "fi": null
-      },
-      {
-        "e": "not_arriving",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-02-18",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "referidos",
-        "vt": "Room Attendant / Housekeeping",
         "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-17",
-        "fi": "2026-02-24"
+        "fc": "2026-02-21",
+        "fi": null
       },
       {
         "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-15",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Hawaii",
-        "ci": "Big Island",
-        "r": "Dora",
-        "f": "referidos",
-        "vt": "Houseman (Housing+Transportation included)",
-        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
-        "fc": "2026-02-14",
-        "fi": "2026-03-03"
-      },
-      {
-        "e": "working",
-        "c": "MAUNA LANI - HAWAI",
-        "st": "Hawaii",
-        "ci": "Big Island",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Houseman (Housing+Transportation included)",
-        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
-        "fc": "2026-02-12",
-        "fi": "2026-02-18"
-      },
-      {
-        "e": "working",
-        "c": "MAUNA LANI - HAWAI",
-        "st": "Hawaii",
-        "ci": "Big Island",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Houseman (Housing+Transportation included)",
-        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
-        "fc": "2026-02-07",
-        "fi": "2026-02-21"
-      },
-      {
-        "e": "working",
         "c": "OKANA RESORT",
         "st": "OK",
         "ci": "Oklahoma City",
@@ -5007,66 +4875,30 @@
         "f": "reclutadora",
         "vt": "Room Attendant / Housekeeping",
         "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-07",
-        "fi": "2026-02-07"
-      },
-      {
-        "e": "not_arriving",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Houseman",
-        "vi": "39323c5b-f691-4841-b852-81eb46ec9263",
-        "fc": "2026-02-06",
+        "fc": "2026-02-20",
         "fi": null
       },
       {
-        "e": "working",
-        "c": "CAMELBACK",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
+        "e": "not_arriving",
+        "c": "PATRIOT",
+        "st": "Maine",
+        "ci": "Kennebunk",
         "r": "Dora",
         "f": "reclutadora",
         "vt": "Line Cook",
-        "vi": "9243597b-86cc-48df-a267-a7b9a6cf73b2",
-        "fc": "2025-12-04",
-        "fi": "2026-01-14"
-      },
-      {
-        "e": "not_arriving",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-24",
+        "vi": "04933c25-04ae-4069-bb3d-c56332970fcc",
+        "fc": "2026-02-20",
         "fi": null
       },
       {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
+        "e": "not_selected",
+        "c": null,
         "st": "Pennsylvania",
         "ci": "Mount Pocono",
         "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-02-21",
-        "fi": "2026-04-10"
-      },
-      {
-        "e": "not_selected",
-        "c": "OKANA RESORT",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
+        "f": "meta_pagado",
         "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
         "fc": "2026-02-20",
         "fi": null
       },
@@ -5085,6 +4917,18 @@
       {
         "e": "not_selected",
         "c": null,
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "meta_pagado",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-19",
+        "fi": null
+      },
+      {
+        "e": "not_selected",
+        "c": null,
         "st": "Pennsylvania",
         "ci": "Mount Pocono",
         "r": "Dora",
@@ -5092,174 +4936,6 @@
         "vt": "Room Attendant / Housekeeping",
         "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
         "fc": "2026-02-19",
-        "fi": null
-      },
-      {
-        "e": "not_arriving",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-19",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "KALAHARI WISCONSIN",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-17",
-        "fi": "2026-03-30"
-      },
-      {
-        "e": "working",
-        "c": "KALAHARI WISCONSIN",
-        "st": "Wisconsin",
-        "ci": "Wisconsin Dells",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "c0a98c6e-7c66-40fb-b6c3-ff6073852b5e",
-        "fc": "2026-02-17",
-        "fi": "2026-03-30"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "Wisconsin",
-        "ci": "Wisconsin Dells",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "c0a98c6e-7c66-40fb-b6c3-ff6073852b5e",
-        "fc": "2026-02-14",
-        "fi": "2026-02-17"
-      },
-      {
-        "e": "contacting",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-11",
-        "fi": null
-      },
-      {
-        "e": "interview",
-        "c": "OKANA RESORT",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-09",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "OKANA RESORT",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-02-07",
-        "fi": "2025-02-07"
-      },
-      {
-        "e": "not_arriving",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-05",
-        "fi": null
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2025-12-08",
-        "fi": null
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2025-12-06",
-        "fi": null
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2025-12-05",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Houseman",
-        "vi": "39323c5b-f691-4841-b852-81eb46ec9263",
-        "fc": "2025-12-04",
-        "fi": "2025-12-15"
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "meta_pagado",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-21",
-        "fi": null
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "meta_pagado",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-20",
         "fi": null
       },
       {
@@ -5271,6 +4947,18 @@
         "f": "meta_pagado",
         "vt": "DISHWASHER",
         "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
+        "fc": "2026-02-19",
+        "fi": null
+      },
+      {
+        "e": "not_arriving",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
         "fc": "2026-02-19",
         "fi": null
       },
@@ -5323,6 +5011,66 @@
         "fi": null
       },
       {
+        "e": "not_arriving",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2026-02-18",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "KALAHARI WISCONSIN",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-17",
+        "fi": "2026-03-30"
+      },
+      {
+        "e": "working",
+        "c": "KALAHARI WISCONSIN",
+        "st": "Wisconsin",
+        "ci": "Wisconsin Dells",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "c0a98c6e-7c66-40fb-b6c3-ff6073852b5e",
+        "fc": "2026-02-17",
+        "fi": "2026-03-30"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "referidos",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-17",
+        "fi": "2026-02-24"
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "meta_pagado",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-16",
+        "fi": null
+      },
+      {
         "e": "not_selected",
         "c": null,
         "st": "OK",
@@ -5333,6 +5081,54 @@
         "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
         "fc": "2026-02-15",
         "fi": null
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-15",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "Wisconsin",
+        "ci": "Wisconsin Dells",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "c0a98c6e-7c66-40fb-b6c3-ff6073852b5e",
+        "fc": "2026-02-14",
+        "fi": "2026-02-17"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Hawaii",
+        "ci": "Big Island",
+        "r": "Dora",
+        "f": "referidos",
+        "vt": "Houseman (Housing+Transportation included)",
+        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
+        "fc": "2026-02-14",
+        "fi": "2026-03-03"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Houseman",
+        "vi": "39323c5b-f691-4841-b852-81eb46ec9263",
+        "fc": "2026-02-14",
+        "fi": "2026-02-22"
       },
       {
         "e": "working",
@@ -5356,6 +5152,42 @@
         "vt": "Room Attendant / Housekeeping",
         "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
         "fc": "2026-02-13",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "MAUNA LANI - HAWAI",
+        "st": "Hawaii",
+        "ci": "Big Island",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Houseman (Housing+Transportation included)",
+        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
+        "fc": "2026-02-12",
+        "fi": "2026-02-18"
+      },
+      {
+        "e": "working",
+        "c": "MAUNA LANI - HAWAI",
+        "st": "Hawaii",
+        "ci": "Big Island",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Houseman (Housing+Transportation included)",
+        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
+        "fc": "2026-02-12",
+        "fi": "2026-02-18"
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-12",
         "fi": null
       },
       {
@@ -5383,6 +5215,102 @@
         "fi": null
       },
       {
+        "e": "contacting",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-11",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-10",
+        "fi": "2026-02-12"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-10",
+        "fi": "2026-02-02"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Oklahoma",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "DISHWASHER",
+        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
+        "fc": "2026-02-09",
+        "fi": "2026-02-13"
+      },
+      {
+        "e": "interview",
+        "c": "OKANA RESORT",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-09",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-08",
+        "fi": "2026-02-09"
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-07",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "MAUNA LANI - HAWAI",
+        "st": "Hawaii",
+        "ci": "Big Island",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Houseman (Housing+Transportation included)",
+        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
+        "fc": "2026-02-07",
+        "fi": "2026-02-21"
+      },
+      {
         "e": "working",
         "c": "OKANA RESORT",
         "st": "OK",
@@ -5393,6 +5321,78 @@
         "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
         "fc": "2026-02-07",
         "fi": "2026-02-07"
+      },
+      {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-07",
+        "fi": "2025-02-07"
+      },
+      {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-02-07",
+        "fi": "2026-02-07"
+      },
+      {
+        "e": "not_arriving",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Houseman",
+        "vi": "39323c5b-f691-4841-b852-81eb46ec9263",
+        "fc": "2026-02-06",
+        "fi": null
+      },
+      {
+        "e": "interview",
+        "c": null,
+        "st": "Oklahoma",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "DISHWASHER",
+        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
+        "fc": "2026-02-05",
+        "fi": null
+      },
+      {
+        "e": "not_arriving",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-05",
+        "fi": null
+      },
+      {
+        "e": "not_arriving",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-05",
+        "fi": null
       },
       {
         "e": "working",
@@ -5417,102 +5417,6 @@
         "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
         "fc": "2026-02-05",
         "fi": "2026-02-05"
-      },
-      {
-        "e": "working",
-        "c": "CAMELBACK",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "HOUSEKEEPING - ROOM ATTENDANT - HOUSEMAN - LAUNDRY - AREAS COMUNES",
-        "vi": "5521d88b-5dba-4619-81aa-5c6999342e63",
-        "fc": "2026-01-23",
-        "fi": "2026-01-30"
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-01-22",
-        "fi": "2026-02-05"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "referidos",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-19",
-        "fi": "2026-02-25"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-13",
-        "fi": "2026-01-14"
-      },
-      {
-        "e": "not_arriving",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-01-12",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "tiktok",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-01-08",
-        "fi": "2026-01-14"
-      },
-      {
-        "e": "working",
-        "c": "CAMELBACK",
-        "st": "Oklahoma",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "LINE COOK - PRE-COOK",
-        "vi": "7a41a017-e96b-45ac-a9fd-70936e635fea",
-        "fc": "2026-01-04",
-        "fi": "2026-01-08"
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-01-03",
-        "fi": "2026-01-09"
       },
       {
         "e": "not_arriving",
@@ -5540,6 +5444,42 @@
       },
       {
         "e": "working",
+        "c": "KALAHARI PENSILVANIA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-02-05",
+        "fi": "2026-02-05"
+      },
+      {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-31",
+        "fi": "2026-02-07"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-30",
+        "fi": "2026-02-01"
+      },
+      {
+        "e": "working",
         "c": "GREATWOLF THE LODGE PA",
         "st": "Pennsylvania",
         "ci": "Mount Pocono",
@@ -5549,6 +5489,18 @@
         "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
         "fc": "2026-01-30",
         "fi": "2026-02-05"
+      },
+      {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "Oklahoma",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Line Cook",
+        "vi": "b7b94baf-61da-4ca1-8f3c-d4a219387123",
+        "fc": "2026-01-29",
+        "fi": "2026-05-31"
       },
       {
         "e": "not_arriving",
@@ -5564,6 +5516,54 @@
       },
       {
         "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-25",
+        "fi": "0206-01-26"
+      },
+      {
+        "e": "working",
+        "c": "CAMELBACK",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "HOUSEKEEPING - ROOM ATTENDANT - HOUSEMAN - LAUNDRY - AREAS COMUNES",
+        "vi": "5521d88b-5dba-4619-81aa-5c6999342e63",
+        "fc": "2026-01-23",
+        "fi": "2026-01-30"
+      },
+      {
+        "e": "working",
+        "c": "CAMELBACK",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "HOUSEKEEPING - ROOM ATTENDANT - HOUSEMAN - LAUNDRY - AREAS COMUNES",
+        "vi": "5521d88b-5dba-4619-81aa-5c6999342e63",
+        "fc": "2026-01-23",
+        "fi": "2026-01-30"
+      },
+      {
+        "e": "contacting",
+        "c": null,
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-23",
+        "fi": null
+      },
+      {
+        "e": "working",
         "c": "GREATWOLF THE LODGE PA",
         "st": "Pennsylvania",
         "ci": "Mount Pocono",
@@ -5573,6 +5573,114 @@
         "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
         "fc": "2026-01-22",
         "fi": "2026-01-30"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2026-01-22",
+        "fi": "2026-02-05"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2026-01-21",
+        "fi": "2026-02-05"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-01-21",
+        "fi": "2026-02-05"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2026-01-20",
+        "fi": "2026-02-28"
+      },
+      {
+        "e": "not_arriving",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-01-20",
+        "fi": "2026-02-26"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "referidos",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-19",
+        "fi": "2026-02-25"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "referidos",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-19",
+        "fi": "2026-02-25"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2026-01-19",
+        "fi": "2026-02-28"
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "HOUSEKEEPING - ROOM ATTENDANT - HOUSEMAN - LAUNDRY - AREAS COMUNES",
+        "vi": "5521d88b-5dba-4619-81aa-5c6999342e63",
+        "fc": "2026-01-18",
+        "fi": null
       },
       {
         "e": "working",
@@ -5624,18 +5732,6 @@
       },
       {
         "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-12",
-        "fi": "2026-01-12"
-      },
-      {
-        "e": "working",
         "c": "GREATWOLF THE LODGE PA",
         "st": "Pennsylvania",
         "ci": "Mount Pocono",
@@ -5643,104 +5739,8 @@
         "f": "reclutadora",
         "vt": "Personal multifuncional para hotel (varias áreas)",
         "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-01-10",
-        "fi": "2026-01-12"
-      },
-      {
-        "e": "working",
-        "c": "OKANA RESORT",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-31",
-        "fi": "2026-02-07"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-30",
-        "fi": "2026-02-01"
-      },
-      {
-        "e": "working",
-        "c": "OKANA RESORT",
-        "st": "Oklahoma",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Line Cook",
-        "vi": "b7b94baf-61da-4ca1-8f3c-d4a219387123",
-        "fc": "2026-01-29",
-        "fi": "2026-05-31"
-      },
-      {
-        "e": "working",
-        "c": "CAMELBACK",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "HOUSEKEEPING - ROOM ATTENDANT - HOUSEMAN - LAUNDRY - AREAS COMUNES",
-        "vi": "5521d88b-5dba-4619-81aa-5c6999342e63",
-        "fc": "2026-01-23",
-        "fi": "2026-01-30"
-      },
-      {
-        "e": "contacting",
-        "c": null,
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-23",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-01-21",
-        "fi": "2026-02-05"
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-01-20",
-        "fi": "2026-02-28"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "referidos",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-19",
-        "fi": "2026-02-25"
+        "fc": "2026-01-15",
+        "fi": "2026-01-15"
       },
       {
         "e": "working",
@@ -5753,6 +5753,18 @@
         "vi": "ebb1052f-f5ca-4698-a66c-539ced03bad2",
         "fc": "2026-01-14",
         "fi": "2026-02-05"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-13",
+        "fi": "2026-01-02"
       },
       {
         "e": "not_arriving",
@@ -5768,6 +5780,18 @@
       },
       {
         "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-13",
+        "fi": "2026-01-14"
+      },
+      {
+        "e": "working",
         "c": "OKANA RESORT",
         "st": "OK",
         "ci": "Oklahoma City",
@@ -5777,6 +5801,78 @@
         "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
         "fc": "2026-01-13",
         "fi": "2026-02-26"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-13",
+        "fi": "2026-01-14"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-13",
+        "fi": "2026-01-14"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-13",
+        "fi": "2026-01-14"
+      },
+      {
+        "e": "not_arriving",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-01-12",
+        "fi": null
+      },
+      {
+        "e": "interview",
+        "c": null,
+        "st": "Oklahoma",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "DISHWASHER",
+        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
+        "fc": "2026-01-12",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "grupos_whatsapp",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2026-01-12",
+        "fi": "2026-01-12"
       },
       {
         "e": "working",
@@ -5800,7 +5896,31 @@
         "vt": "Personal multifuncional para hotel (varias áreas)",
         "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
         "fc": "2026-01-10",
+        "fi": "2026-01-12"
+      },
+      {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2026-01-10",
         "fi": "2026-02-13"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "tiktok",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2026-01-08",
+        "fi": "2026-01-14"
       },
       {
         "e": "working",
@@ -5813,198 +5933,6 @@
         "vi": "39323c5b-f691-4841-b852-81eb46ec9263",
         "fc": "2026-01-08",
         "fi": "2026-01-14"
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-01-05",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "CAMELBACK",
-        "st": "Maine",
-        "ci": "Kennebunk",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Line Cook",
-        "vi": "04933c25-04ae-4069-bb3d-c56332970fcc",
-        "fc": "2026-01-02",
-        "fi": "2026-01-03"
-      },
-      {
-        "e": "working",
-        "c": "OKANA RESORT",
-        "st": "Oklahoma",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "DISHWASHER",
-        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
-        "fc": "2026-01-02",
-        "fi": "2026-05-31"
-      },
-      {
-        "e": "not_arriving",
-        "c": "CAMELBACK",
-        "st": "Maine",
-        "ci": "Kennebunk",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Line Cook",
-        "vi": "04933c25-04ae-4069-bb3d-c56332970fcc",
-        "fc": "2026-01-01",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "KALAHARI PENSILVANIA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-02-05",
-        "fi": "2026-02-05"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-25",
-        "fi": "0206-01-26"
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-01-21",
-        "fi": "2026-02-05"
-      },
-      {
-        "e": "not_arriving",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2026-01-20",
-        "fi": "2026-02-26"
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-01-19",
-        "fi": "2026-02-28"
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "HOUSEKEEPING - ROOM ATTENDANT - HOUSEMAN - LAUNDRY - AREAS COMUNES",
-        "vi": "5521d88b-5dba-4619-81aa-5c6999342e63",
-        "fc": "2026-01-18",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2026-01-15",
-        "fi": "2026-01-15"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "grupos_whatsapp",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-13",
-        "fi": "2026-01-02"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-13",
-        "fi": "2026-01-14"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-13",
-        "fi": "2026-01-14"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2026-01-13",
-        "fi": "2026-01-14"
-      },
-      {
-        "e": "interview",
-        "c": null,
-        "st": "Oklahoma",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "DISHWASHER",
-        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
-        "fc": "2026-01-12",
-        "fi": null
       },
       {
         "e": "working",
@@ -6055,6 +5983,30 @@
         "fi": null
       },
       {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2026-01-05",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "CAMELBACK",
+        "st": "Oklahoma",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "LINE COOK - PRE-COOK",
+        "vi": "7a41a017-e96b-45ac-a9fd-70936e635fea",
+        "fc": "2026-01-04",
+        "fi": "2026-01-08"
+      },
+      {
         "e": "not_arriving",
         "c": "CAMELBACK",
         "st": "Pennsylvania",
@@ -6103,6 +6055,54 @@
         "fi": "2026-01-21"
       },
       {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2026-01-03",
+        "fi": "2026-01-09"
+      },
+      {
+        "e": "working",
+        "c": "CAMELBACK",
+        "st": "Maine",
+        "ci": "Kennebunk",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Line Cook",
+        "vi": "04933c25-04ae-4069-bb3d-c56332970fcc",
+        "fc": "2026-01-02",
+        "fi": "2026-01-03"
+      },
+      {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "Oklahoma",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "DISHWASHER",
+        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
+        "fc": "2026-01-02",
+        "fi": "2026-05-31"
+      },
+      {
+        "e": "not_arriving",
+        "c": "CAMELBACK",
+        "st": "Maine",
+        "ci": "Kennebunk",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Line Cook",
+        "vi": "04933c25-04ae-4069-bb3d-c56332970fcc",
+        "fc": "2026-01-01",
+        "fi": null
+      },
+      {
         "e": "not_arriving",
         "c": "CAMELBACK",
         "st": "Pennsylvania",
@@ -6125,6 +6125,42 @@
         "vi": "bfaf8422-284c-4cc9-baf9-5aeef26da04d",
         "fc": "2025-12-30",
         "fi": "2026-01-18"
+      },
+      {
+        "e": "working",
+        "c": "CAMELBACK",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2025-12-30",
+        "fi": "2026-01-10"
+      },
+      {
+        "e": "working",
+        "c": "MAUNA LANI - HAWAI",
+        "st": "Hawaii",
+        "ci": "Big Island",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant",
+        "vi": "ebb1052f-f5ca-4698-a66c-539ced03bad2",
+        "fc": "2025-12-29",
+        "fi": "2026-01-17"
+      },
+      {
+        "e": "working",
+        "c": "CAMELBACK",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Personal multifuncional para hotel (varias áreas)",
+        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
+        "fc": "2025-12-29",
+        "fi": "2025-12-29"
       },
       {
         "e": "not_arriving",
@@ -6151,6 +6187,18 @@
         "fi": null
       },
       {
+        "e": "working",
+        "c": "CAMELBACK",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2025-12-29",
+        "fi": "2026-01-12"
+      },
+      {
         "e": "not_arriving",
         "c": "GREATWOLF THE LODGE PA",
         "st": "Maine",
@@ -6175,6 +6223,30 @@
         "fi": "2026-01-06"
       },
       {
+        "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2025-12-28",
+        "fi": "2026-01-01"
+      },
+      {
+        "e": "working",
+        "c": "CAMELBACK",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2025-12-28",
+        "fi": "2026-03-02"
+      },
+      {
         "e": "not_selected",
         "c": null,
         "st": "Pennsylvania",
@@ -6185,6 +6257,54 @@
         "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
         "fc": "2025-12-27",
         "fi": null
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2025-12-27",
+        "fi": "2025-12-27"
+      },
+      {
+        "e": "interview",
+        "c": null,
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2025-12-26",
+        "fi": null
+      },
+      {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "Oklahoma",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "DISHWASHER",
+        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
+        "fc": "2025-12-22",
+        "fi": "2025-12-22"
+      },
+      {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "Oklahoma",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "DISHWASHER",
+        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
+        "fc": "2025-12-22",
+        "fi": "2025-12-22"
       },
       {
         "e": "interview",
@@ -6223,150 +6343,6 @@
         "fi": null
       },
       {
-        "e": "interview",
-        "c": "OKANA RESORT",
-        "st": "Oklahoma",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "DISHWASHER",
-        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
-        "fc": "2025-12-18",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "PATRIOT",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Line Cook / Pre-Cook / Asistente de cocina",
-        "vi": "9243597b-86cc-48df-a267-a7b9a6cf73b2",
-        "fc": "2025-12-17",
-        "fi": "2025-12-22"
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2025-12-16",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2025-12-09",
-        "fi": "2025-12-09"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2025-12-09",
-        "fi": "2025-12-09"
-      },
-      {
-        "e": "working",
-        "c": "MAUNA LANI - HAWAI",
-        "st": "Hawaii",
-        "ci": "Big Island",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant",
-        "vi": "ebb1052f-f5ca-4698-a66c-539ced03bad2",
-        "fc": "2025-12-29",
-        "fi": "2026-01-17"
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2025-12-28",
-        "fi": "2026-01-01"
-      },
-      {
-        "e": "working",
-        "c": "CAMELBACK",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2025-12-28",
-        "fi": "2026-03-02"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2025-12-27",
-        "fi": "2025-12-27"
-      },
-      {
-        "e": "not_selected",
-        "c": null,
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2025-12-15",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "GREATWOLF THE LODGE PA",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Houseman",
-        "vi": "39323c5b-f691-4841-b852-81eb46ec9263",
-        "fc": "2025-12-11",
-        "fi": "2025-12-29"
-      },
-      {
-        "e": "working",
-        "c": "WILDERNESS",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2025-12-09",
-        "fi": "2025-12-09"
-      },
-      {
         "e": "working",
         "c": "PATRIOT",
         "st": "Maine",
@@ -6391,6 +6367,30 @@
         "fi": null
       },
       {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2025-12-19",
+        "fi": "2025-12-19"
+      },
+      {
+        "e": "interview",
+        "c": "OKANA RESORT",
+        "st": "Oklahoma",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "DISHWASHER",
+        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
+        "fc": "2025-12-18",
+        "fi": null
+      },
+      {
         "e": "not_arriving",
         "c": "CAMELBACK",
         "st": "Pennsylvania",
@@ -6411,8 +6411,68 @@
         "f": "reclutadora",
         "vt": "Room Attendant / Housekeeping",
         "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2025-12-18",
+        "fi": "2025-12-18"
+      },
+      {
+        "e": "working",
+        "c": "PATRIOT",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Line Cook / Pre-Cook / Asistente de cocina",
+        "vi": "9243597b-86cc-48df-a267-a7b9a6cf73b2",
+        "fc": "2025-12-17",
+        "fi": "2025-12-22"
+      },
+      {
+        "e": "working",
+        "c": "OKANA RESORT",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
         "fc": "2025-12-17",
         "fi": "2025-12-18"
+      },
+      {
+        "e": "not_selected",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2025-12-16",
+        "fi": null
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2025-12-16",
+        "fi": null
+      },
+      {
+        "e": "not_selected",
+        "c": null,
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2025-12-15",
+        "fi": null
       },
       {
         "e": "not_selected",
@@ -6452,6 +6512,18 @@
       },
       {
         "e": "working",
+        "c": "GREATWOLF THE LODGE PA",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Houseman",
+        "vi": "39323c5b-f691-4841-b852-81eb46ec9263",
+        "fc": "2025-12-11",
+        "fi": "2025-12-29"
+      },
+      {
+        "e": "working",
         "c": "MAUNA LANI - HAWAI",
         "st": "Hawaii",
         "ci": "Big Island",
@@ -6476,102 +6548,6 @@
       },
       {
         "e": "working",
-        "c": "CAMELBACK",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2025-12-30",
-        "fi": "2026-01-10"
-      },
-      {
-        "e": "working",
-        "c": "CAMELBACK",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Personal multifuncional para hotel (varias áreas)",
-        "vi": "918c4748-18a1-44d7-8bd8-0a14aedd7aea",
-        "fc": "2025-12-29",
-        "fi": "2025-12-29"
-      },
-      {
-        "e": "working",
-        "c": "CAMELBACK",
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2025-12-29",
-        "fi": "2026-01-12"
-      },
-      {
-        "e": "interview",
-        "c": null,
-        "st": "Pennsylvania",
-        "ci": "Mount Pocono",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
-        "fc": "2025-12-26",
-        "fi": null
-      },
-      {
-        "e": "working",
-        "c": "OKANA RESORT",
-        "st": "Oklahoma",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "DISHWASHER",
-        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
-        "fc": "2025-12-22",
-        "fi": "2025-12-22"
-      },
-      {
-        "e": "working",
-        "c": "OKANA RESORT",
-        "st": "Oklahoma",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "DISHWASHER",
-        "vi": "78f63bd3-8519-41d4-915d-0792e99ca8c7",
-        "fc": "2025-12-22",
-        "fi": "2025-12-22"
-      },
-      {
-        "e": "working",
-        "c": "OKANA RESORT",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2025-12-19",
-        "fi": "2025-12-19"
-      },
-      {
-        "e": "working",
-        "c": "OKANA RESORT",
-        "st": "OK",
-        "ci": "Oklahoma City",
-        "r": "Dora",
-        "f": "reclutadora",
-        "vt": "Room Attendant / Housekeeping",
-        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2025-12-18",
-        "fi": "2025-12-18"
-      },
-      {
-        "e": "not_selected",
         "c": "WILDERNESS",
         "st": "OK",
         "ci": "Oklahoma City",
@@ -6579,8 +6555,32 @@
         "f": "reclutadora",
         "vt": "Room Attendant / Housekeeping",
         "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
-        "fc": "2025-12-16",
-        "fi": null
+        "fc": "2025-12-09",
+        "fi": "2025-12-09"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "OK",
+        "ci": "Oklahoma City",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "6375ebb2-04cf-4d83-a312-b7e06e47166a",
+        "fc": "2025-12-09",
+        "fi": "2025-12-09"
+      },
+      {
+        "e": "working",
+        "c": "WILDERNESS",
+        "st": "Pennsylvania",
+        "ci": "Mount Pocono",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "Room Attendant / Housekeeping",
+        "vi": "88fe8a85-503b-4cbd-b56b-e8e6815b810d",
+        "fc": "2025-12-09",
+        "fi": "2025-12-09"
       },
       {
         "e": "working",
@@ -14148,7 +14148,7 @@
         "st": "Ohio",
         "ci": "Sandusky",
         "r": "Dora",
-        "f": "sin_fuente",
+        "f": "reclutadora",
         "vt": "WATER PARK: LIFEGUARD",
         "vi": "ea8fc53d-c0e1-4e90-a401-6088115961c9",
         "fc": "2026-10-28",
@@ -14273,6 +14273,90 @@
         "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
         "fc": "2026-10-30",
         "fi": null
+      },
+      {
+        "e": "new",
+        "c": null,
+        "st": "Wisconsin",
+        "ci": "Wisconsin Dells",
+        "r": null,
+        "f": "sin_fuente",
+        "vt": "HOUSEKEEPING: ROOM ATTENDANT",
+        "vi": "c0a98c6e-7c66-40fb-b6c3-ff6073852b5e",
+        "fc": "2026-10-30",
+        "fi": null
+      },
+      {
+        "e": "new",
+        "c": null,
+        "st": "North Carolina",
+        "ci": "Concord",
+        "r": null,
+        "f": "sin_fuente",
+        "vt": "HOUSEKEEPING: ROOM ATTENDANT",
+        "vi": "a8724c15-be84-4341-a549-23d0ed58442e",
+        "fc": "2026-10-30",
+        "fi": null
+      },
+      {
+        "e": "new",
+        "c": null,
+        "st": "Ohio",
+        "ci": "Sandusky",
+        "r": null,
+        "f": "sin_fuente",
+        "vt": "HOUSEKEEPING: AREAS COMUNES SUPERVISOR ",
+        "vi": "b168f6a9-f4e4-4ead-a4c8-7a4081568b0c",
+        "fc": "2026-10-30",
+        "fi": null
+      },
+      {
+        "e": "new",
+        "c": null,
+        "st": "Hawaii",
+        "ci": "Big Island",
+        "r": "Dora",
+        "f": "meta_pagado",
+        "vt": "HOSEKEEPING: HOUSEMAN (Housing+Transportation included)",
+        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
+        "fc": "2026-10-30",
+        "fi": null
+      },
+      {
+        "e": "sent",
+        "c": "MAUNA LANI - HAWAI",
+        "st": "Hawaii",
+        "ci": "Big Island",
+        "r": "Dora",
+        "f": "reclutadora",
+        "vt": "HOSEKEEPING: HOUSEMAN (Housing+Transportation included)",
+        "vi": "f204e6d8-4322-4b59-88f8-994078850cc4",
+        "fc": "2026-10-30",
+        "fi": null
+      },
+      {
+        "e": "new",
+        "c": null,
+        "st": "Wisconsin",
+        "ci": "Wisconsin Dells",
+        "r": null,
+        "f": "sin_fuente",
+        "vt": "HOUSEKEEPING: ROOM ATTENDANT",
+        "vi": "c0a98c6e-7c66-40fb-b6c3-ff6073852b5e",
+        "fc": "2026-10-30",
+        "fi": null
+      },
+      {
+        "e": "sent",
+        "c": "CLIFF HOUSE",
+        "st": "Maine",
+        "ci": "Cape Neddick",
+        "r": "Dora",
+        "f": "sin_fuente",
+        "vt": "HOUSEKEEPING: ROOM ATTENDANT",
+        "vi": "a7924dce-eba2-49ab-8ab2-ba11b4f3803b",
+        "fc": "2026-10-30",
+        "fi": null
       }
     ]
   },
@@ -14285,8 +14369,8 @@
     },
     "aviso_periodo": "AVISO: datos Meta abarcan solo 24 días (2026-09-14 a 2026-10-07). El total '30d' es idéntico al histórico — el período 30d captura todos los datos disponibles.",
     "atribucion": {
-      "apps_con_lead_source_meta": 108,
-      "total_apps": 808,
+      "apps_con_lead_source_meta": 109,
+      "total_apps": 815,
       "pct_apps_atribuidas": 13.4,
       "nota": "lead_source='meta' ≈ atribución. meta_ad_id individual solo presente en docs recientes (~24%). Sin join confiable app↔campaña."
     },
@@ -14302,7 +14386,7 @@
       },
       "B_apps_canal_meta": {
         "descripcion": "Aplicantes con campo lead_source='meta' en MongoDB (canal de entrada)",
-        "total": 108,
+        "total": 109,
         "pct_del_total": 13.4,
         "nota_temporal": "Conteo ALL TIME — no filtrado por período. No comparable directamente con leads Meta (capa A) que cubre solo 2026-09-14 a 2026-10-07."
       },
@@ -14326,7 +14410,7 @@
     },
     "por_periodo": {
       "7d": {
-        "periodo_definicion": "Últimos 7 días (2026-10-23 a 2026-10-30)",
+        "periodo_definicion": "Últimos 7 días (2026-10-24 a 2026-10-31)",
         "gasto": 0,
         "leads": 0,
         "conversaciones": 0,
@@ -14335,16 +14419,16 @@
         "costo_por_conv": null
       },
       "30d": {
-        "periodo_definicion": "Últimos 30 días (2026-09-30 a 2026-10-30)",
+        "periodo_definicion": "Últimos 30 días (2026-10-01 a 2026-10-31)",
         "gasto": 362.61,
-        "leads": 9,
-        "conversaciones": 79,
+        "leads": 4,
+        "conversaciones": 77,
         "impresiones": 19906,
-        "cpl": 40.29,
-        "costo_por_conv": 4.59
+        "cpl": 90.65,
+        "costo_por_conv": 4.71
       },
       "60d": {
-        "periodo_definicion": "Últimos 60 días (2026-08-31 a 2026-10-30)",
+        "periodo_definicion": "Últimos 60 días (2026-09-01 a 2026-10-31)",
         "gasto": 3616.49,
         "leads": 135,
         "conversaciones": 848,
@@ -14363,13 +14447,13 @@
       }
     },
     "periodo_30d": {
-      "periodo_definicion": "Últimos 30 días (2026-09-30 a 2026-10-30)",
+      "periodo_definicion": "Últimos 30 días (2026-10-01 a 2026-10-31)",
       "gasto": 362.61,
-      "leads": 9,
-      "conversaciones": 79,
+      "leads": 4,
+      "conversaciones": 77,
       "impresiones": 19906,
-      "cpl": 40.29,
-      "costo_por_conv": 4.59
+      "cpl": 90.65,
+      "costo_por_conv": 4.71
     },
     "por_mes": [
       {
@@ -14554,7 +14638,7 @@
       },
       "B_workya_captacion_meta": {
         "descripcion": "Aplicantes WorkYa con lead_source='meta' — cobertura ALL TIME",
-        "total_aplicantes_meta": 108,
+        "total_aplicantes_meta": 109,
         "nota_temporal": "ALL TIME — no alineado con período de datos Meta (sep-oct 2026)"
       },
       "C_campana_especifica": {
@@ -14573,7 +14657,7 @@
       "apps_con_meta_ad_id": 0,
       "apps_matched_to_campaign": 0,
       "apps_no_match_in_daily": 0,
-      "nota_metodologia": "Join: applications.meta_ad_id → meta_ad_daily.ad_id. Cobertura: 0/808 apps (~0.0% del total). Muestra apps con meta_ad_id verificable — NO infiere gasto por vacante. NO usar para calcular ROI ni CPH por vacante.",
+      "nota_metodologia": "Join: applications.meta_ad_id → meta_ad_daily.ad_id. Cobertura: 0/815 apps (~0.0% del total). Muestra apps con meta_ad_id verificable — NO infiere gasto por vacante. NO usar para calcular ROI ni CPH por vacante.",
       "identificador_faltante": "Para atribución completa: poblar applications.meta_ad_id en TODOS los aplicantes Meta. Campo existe en WorkYa-security. Actualmente solo apps recientes tienen el campo.",
       "por_vacante": []
     }
@@ -14593,9 +14677,9 @@
       {
         "tipo": "nuevo_sin_gestion",
         "label": "Nuevos sin gestión >3d",
-        "total": 13,
+        "total": 14,
         "por_reclutadora": {
-          "Dora": 7,
+          "Dora": 8,
           "Sin asignar": 5,
           "Sidivan": 1
         }
@@ -14654,21 +14738,21 @@
       {
         "tipo": "sin_fuente",
         "label": "Sin fuente de captación",
-        "total": 111,
+        "total": 115,
         "por_reclutadora": {
           "Sofia": 52,
           "Sidivan": 18,
           "Dora": 15,
+          "Sin asignar": 12,
           "Natallia": 10,
-          "Sin asignar": 8,
           "Ana Sofia": 7,
           "Director": 1
         }
       }
     ],
-    "incidencias_totales": 349,
-    "candidatos_afectados_unicos": 234,
-    "nota_deduplicacion": "Un candidato puede aparecer en múltiples alertas simultáneamente. 'incidencias_totales' (349) = suma de todos los totales. 'candidatos_afectados_unicos' (234) = candidatos distintos en ≥1 alerta. Usar 'incidencias_totales' para carga de trabajo; 'candidatos_afectados_unicos' para alcance de candidatos."
+    "incidencias_totales": 354,
+    "candidatos_afectados_unicos": 238,
+    "nota_deduplicacion": "Un candidato puede aparecer en múltiples alertas simultáneamente. 'incidencias_totales' (354) = suma de todos los totales. 'candidatos_afectados_unicos' (238) = candidatos distintos en ≥1 alerta. Usar 'incidencias_totales' para carga de trabajo; 'candidatos_afectados_unicos' para alcance de candidatos."
   },
   "calidad_datos": {
     "resumen": {
@@ -14684,7 +14768,7 @@
         "label": "Working sin fecha de inicio",
         "count": 3,
         "pct": 0.4,
-        "total_base": 808,
+        "total_base": 815,
         "severidad": "critica",
         "metric_impact": "Ingresos working sin started_working_at — no asignables a período",
         "nota": null
@@ -14693,18 +14777,18 @@
         "issue": "fecha_sin_working_stage",
         "label": "Fecha de ingreso con stage incompatible",
         "count": 32,
-        "pct": 4.0,
-        "total_base": 808,
+        "pct": 3.9,
+        "total_base": 815,
         "severidad": "critica",
         "metric_impact": "started_working_at existe pero pipeline_stage ≠ working — inconsistencia",
-        "nota": "Por stage actual: {'not_arriving': 13, 'new': 2, 'sent': 17}"
+        "nota": "Por stage actual: {'sent': 17, 'not_arriving': 13, 'new': 2}"
       },
       {
         "issue": "fechas_futuras",
         "label": "Fechas futuras en started_working_at",
         "count": 1,
         "pct": 0.1,
-        "total_base": 808,
+        "total_base": 815,
         "severidad": "critica",
         "metric_impact": "started_working_at en el futuro — excluidas de métricas temporales",
         "nota": "Probablemente typos (ej: 2026-12-01 en lugar de 2025-12-01)"
@@ -14722,9 +14806,9 @@
       {
         "issue": "sin_lead_source",
         "label": "Sin fuente de captación",
-        "count": 115,
-        "pct": 14.2,
-        "total_base": 808,
+        "count": 119,
+        "pct": 14.6,
+        "total_base": 815,
         "severidad": "alta",
         "metric_impact": "Analytics de fuentes subestimadas",
         "nota": null
@@ -14732,9 +14816,9 @@
       {
         "issue": "sin_owner",
         "label": "Sin reclutadora asignada",
-        "count": 9,
-        "pct": 1.1,
-        "total_base": 808,
+        "count": 13,
+        "pct": 1.6,
+        "total_base": 815,
         "severidad": "alta",
         "metric_impact": "Candidatos no asignados a reclutadora",
         "nota": null
@@ -14744,7 +14828,7 @@
         "label": "Sin job_id",
         "count": 2,
         "pct": 0.2,
-        "total_base": 808,
+        "total_base": 815,
         "severidad": "media",
         "metric_impact": "Análisis por vacante imposible para estos candidatos",
         "nota": null
@@ -14752,29 +14836,29 @@
       {
         "issue": "sla_met_nulo",
         "label": "sla_met vacío",
-        "count": 807,
+        "count": 814,
         "pct": 99.9,
-        "total_base": 808,
+        "total_base": 815,
         "severidad": "media",
         "metric_impact": "KPI de SLA inutilizable — campo nunca llenado",
         "nota": null
       },
       {
         "issue": "gender_no_normalizado",
-        "label": "Género en 7 formatos distintos",
-        "count": 806,
+        "label": "Género en 8 formatos distintos",
+        "count": 813,
         "pct": 99.8,
-        "total_base": 808,
+        "total_base": 815,
         "severidad": "alta",
         "metric_impact": "Reportes de género inconsistentes — múltiples formatos",
-        "nota": "Valores: {'Masculino': 302, 'male': 130, 'Femenino': 218, 'female': 133, 'M': 9, 'F': 13, '[valor_redactado]': 1}"
+        "nota": "Valores: {'Masculino': 307, 'Femenino': 219, 'male': 130, 'female': 133, 'M': 9, 'F': 13, '[valor_redactado]': 1, 'Prefiero no decir': 1}"
       },
       {
         "issue": "client_id_vacio",
         "label": "client_id sin cobertura",
-        "count": 808,
+        "count": 815,
         "pct": 100.0,
-        "total_base": 808,
+        "total_base": 815,
         "severidad": "alta",
         "metric_impact": "Vinculación app→cliente depende de sent_to (texto libre, no UUID)",
         "nota": null
@@ -14839,7 +14923,7 @@
       {
         "check": "pipeline_activo_solo_stages_activos",
         "passed": true,
-        "nota": "active_apps solo contiene stages: {'interview', 'new', 'sent', 'contacting'}"
+        "nota": "active_apps solo contiene stages: {'new', 'contacting', 'interview', 'sent'}"
       },
       {
         "check": "historico_no_mezclado_con_periodo",
@@ -14859,7 +14943,7 @@
       {
         "check": "gate_alert_30d_lte_stale_30d",
         "passed": true,
-        "nota": "alert_30d=93 <= stale_30d=223 — alertas son subconjunto de estancados"
+        "nota": "alert_30d=93 <= stale_30d=224 — alertas son subconjunto de estancados"
       },
       {
         "check": "gate_stale_tiene_desglose",
@@ -14869,7 +14953,7 @@
       {
         "check": "gate_stale_desglose_correcto",
         "passed": true,
-        "nota": "con_log=93 + fallback=130 == total=223"
+        "nota": "con_log=93 + fallback=131 == total=224"
       },
       {
         "check": "gate_diario_existe",
@@ -14914,7 +14998,7 @@
       {
         "check": "gate_stale_monotono",
         "passed": true,
-        "nota": "Monotónico: 7+d=270 >= 14+d=249 >= 30+d=223"
+        "nota": "Monotónico: 7+d=273 >= 14+d=253 >= 30+d=224"
       },
       {
         "check": "gate_reclutadoras_muestra_campo_existe",
@@ -14939,7 +15023,7 @@
       {
         "check": "gate_3c_diario_fechas_correctas",
         "passed": true,
-        "nota": "diario[0]=2026-10-01 diario[-1]=2026-10-30"
+        "nota": "diario[0]=2026-10-02 diario[-1]=2026-10-31"
       },
       {
         "check": "gate_3c_alertas_incidencias_campo",
@@ -14954,7 +15038,7 @@
       {
         "check": "gate_3c_unicos_lte_incidencias",
         "passed": true,
-        "nota": "candidatos_unicos=234 <= incidencias_totales=349"
+        "nota": "candidatos_unicos=238 <= incidencias_totales=354"
       },
       {
         "check": "gate_3c_meta_periodo_definicion",
@@ -14989,27 +15073,27 @@
       {
         "check": "gate_4a_entregados_formula",
         "passed": true,
-        "nota": "entregados=602 == sent+working+not_arr+not_sel=602"
+        "nota": "entregados=604 == sent+working+not_arr+not_sel=604"
       },
       {
         "check": "gate_4a_entregados_lte_total",
         "passed": true,
-        "nota": "entregados=602 <= total=808"
+        "nota": "entregados=604 <= total=815"
       },
       {
         "check": "gate_4a_incorporados_lte_entregados",
         "passed": true,
-        "nota": "incorporados=357 <= entregados=602"
+        "nota": "incorporados=357 <= entregados=604"
       },
       {
         "check": "gate_4a_tasa_entrega_valid",
         "passed": true,
-        "nota": "tasa_entrega=74.5"
+        "nota": "tasa_entrega=74.1"
       },
       {
         "check": "gate_4a_geo_state_sum",
         "passed": true,
-        "nota": "geo_state_sum=804 == apps_with_job=804"
+        "nota": "geo_state_sum=811 == apps_with_job=811"
       },
       {
         "check": "gate_4a_jerarquia_nonempty",
@@ -15034,7 +15118,7 @@
       {
         "check": "gate_4b_tasa_finalizada_gte_base",
         "passed": true,
-        "nota": "tasa_inc_finalizada=69.9 >= tasa_inc_base=59.3"
+        "nota": "tasa_inc_finalizada=69.9 >= tasa_inc_base=59.1"
       },
       {
         "check": "gate_4b_meta_atrib_por_vacante",
@@ -15044,7 +15128,7 @@
       {
         "check": "gate_4b_pending_sent_eq_stage",
         "passed": true,
-        "nota": "pending_decision_sent=91 == stage_sent_count=91"
+        "nota": "pending_decision_sent=93 == stage_sent_count=93"
       },
       {
         "check": "gate_4b_schema_version",
@@ -15054,47 +15138,47 @@
       {
         "check": "gate_4c_apps_anonimas",
         "passed": true,
-        "nota": "apps_anonimas.registros=808 == apps=808"
+        "nota": "apps_anonimas.registros=815 == apps=815"
       },
       {
         "check": "gate_aging_30_lte_14",
         "passed": true,
-        "nota": "30+d=223 <= 14+d=249"
+        "nota": "30+d=224 <= 14+d=253"
       },
       {
         "check": "gate_aging_14_lte_7",
         "passed": true,
-        "nota": "14+d=249 <= 7+d=270"
+        "nota": "14+d=253 <= 7+d=273"
       },
       {
         "check": "gate_aging_7_lte_active",
         "passed": true,
-        "nota": "7+d=270 <= active=297"
+        "nota": "7+d=273 <= active=304"
       },
       {
         "check": "gate_age_buckets_sum_eq_active",
         "passed": true,
-        "nota": "sum_buckets=297 == active=297"
+        "nota": "sum_buckets=304 == active=304"
       },
       {
         "check": "gate_eligible_60_lte_30",
         "passed": true,
-        "nota": "eligible_60d=604 <= eligible_30d=717"
+        "nota": "eligible_60d=610 <= eligible_30d=718"
       },
       {
         "check": "gate_eligible_30_lte_14",
         "passed": true,
-        "nota": "eligible_30d=717 <= eligible_14d=755"
+        "nota": "eligible_30d=718 <= eligible_14d=760"
       },
       {
         "check": "gate_eligible_14_lte_7",
         "passed": true,
-        "nota": "eligible_14d=755 <= eligible_7d=781"
+        "nota": "eligible_14d=760 <= eligible_7d=785"
       },
       {
         "check": "gate_eligible_7_lte_total",
         "passed": true,
-        "nota": "eligible_7d=781 <= total=808"
+        "nota": "eligible_7d=785 <= total=815"
       },
       {
         "check": "gate_conv_lte_eligible",
@@ -15104,12 +15188,12 @@
       {
         "check": "gate_starts_7_lte_30",
         "passed": true,
-        "nota": "starts_7d=7 <= starts_30d=26"
+        "nota": "starts_7d=7 <= starts_30d=25"
       },
       {
         "check": "gate_starts_30_lte_60",
         "passed": true,
-        "nota": "starts_30d=26 <= starts_60d=54"
+        "nota": "starts_30d=25 <= starts_60d=54"
       },
       {
         "check": "gate_starts_60_lte_90",
@@ -15139,22 +15223,22 @@
       {
         "check": "gate_6a_stage_sum_eq_total",
         "passed": true,
-        "nota": "sum(stages)=808 == total_apps=808"
+        "nota": "sum(stages)=815 == total_apps=815"
       },
       {
         "check": "gate_6a_pipeline_active_sum",
         "passed": true,
-        "nota": "new+contacting+interview+sent=297 == total_activo=297"
+        "nota": "new+contacting+interview+sent=304 == total_activo=304"
       },
       {
         "check": "gate_6a_tasa_colocacion_formula",
         "passed": true,
-        "nota": "recalc=59.3% vs reportado=59.3% (delta=0.00%)"
+        "nota": "recalc=59.1% vs reportado=59.1% (delta=0.00%)"
       },
       {
         "check": "gate_6a_sin_fuente_pct",
         "passed": true,
-        "nota": "sin_fuente=115 (14.2%) < 20% del total"
+        "nota": "sin_fuente=119 (14.6%) < 20% del total"
       },
       {
         "check": "gate_6a_no_hardcoded_credentials",
@@ -15169,7 +15253,7 @@
       {
         "check": "gate_6a_recency_30d_lte_working",
         "passed": true,
-        "nota": "recency_30d=26 <= working_total=357"
+        "nota": "recency_30d=25 <= working_total=357"
       }
     ]
   }
