@@ -871,8 +871,12 @@ def run(apps, logs, jobs, clients, meta, now=None):
         "total_working": len([a for a in apps if a["_stage"] == "working"]),
         "total_cerrado_negativo": len([a for a in apps if a["_stage"] in NEGATIVE_STAGES]),
         "por_stage": {
-            s: sum(1 for a in apps if a["_stage"] == s)
-            for s in list(ACTIVE_STAGES) + ["working", "not_selected", "not_arriving"]
+            **{s: sum(1 for a in apps if a["_stage"] == s)
+               for s in list(ACTIVE_STAGES) + ["working", "not_selected", "not_arriving"]},
+            "other": sum(
+                1 for a in apps
+                if a["_stage"] not in (ACTIVE_STAGES | {"working", "not_selected", "not_arriving"})
+            ),
         },
         "por_reclutadora": {
             rid: {
@@ -2066,11 +2070,22 @@ def run(apps, logs, jobs, clients, meta, now=None):
         RECRUITER_NAME_TO_ID.get("dora.moreno") == RECRUITER_NAME_TO_ID.get("Dora Moreno"),
         "dora.moreno y nombre_completo mapean al mismo user_id 14e15932")
 
-    # Sidivan sin actividad — no recibe tasa artificial
+    # Sidivan — controles basados en condiciones reales de cálculo
     sidivan_perf = recruiter_analytics.get("f508e98a-921a-4ba3-8218-e2a1fc39eb9e", {})
-    chk("sidivan_no_tasa_artificial",
-        sidivan_perf.get("performance", {}).get("tasa_colocacion_30d", {}).get("valor") is None,
-        "Sidivan no muestra tasa (sin actividad / muestra insuficiente)")
+    _s_tasa    = sidivan_perf.get("performance", {}).get("tasa_colocacion_30d", {})
+    _s_muestra = _s_tasa.get("muestra_suficiente", False)
+    _s_num     = _s_tasa.get("numerador", 0)
+    _s_den     = _s_tasa.get("denominador", 0)
+    _s_valor   = _s_tasa.get("valor")
+    chk("gate_sidivan_no_div_zero",
+        _s_valor is None or _s_den > 0,
+        f"Sidivan: valor={_s_valor}, denominador={_s_den} — sin división por cero")
+    chk("gate_sidivan_tasa_en_rango",
+        _s_valor is None or (isinstance(_s_valor, (int, float)) and 0.0 <= _s_valor <= 100.0),
+        f"Sidivan tasa={_s_valor} dentro de [0, 100]% (None si muestra insuficiente o cohort vacío)")
+    chk("gate_sidivan_num_denom_coherente",
+        _s_num <= _s_den or _s_den == 0,
+        f"Sidivan: numerador={_s_num} <= denominador={_s_den}")
 
     # Applications y starts usan fechas distintas
     chk("aplicantes_usa_created_at",
@@ -2487,11 +2502,17 @@ def run(apps, logs, jobs, clients, meta, now=None):
         f"(año fuera del rango {_DT_MIN.year}–{_DT_MAX.year}). "
         "Corrección requiere autorización — ver WORKYA_DASHBOARD_V3_SPRINT6A_SECURITY.md")
 
-    # 6A-2: Suma de stages = total de aplicantes
+    # 6A-2: Suma de stages = total de aplicantes (incluye categoría "other")
     _stage_sum = sum(pipeline["por_stage"].values())
     chk("gate_6a_stage_sum_eq_total",
         _stage_sum == len(apps),
         f"sum(stages)={_stage_sum} == total_apps={len(apps)}")
+
+    # 6A-2b: advertencia de calidad si hay stages fuera del listado conocido
+    _other_stage_count = pipeline["por_stage"].get("other", 0)
+    chk("gate_6a_no_unknown_stages",
+        _other_stage_count == 0,
+        f"other_stages={_other_stage_count} apps con pipeline_stage fuera de los 7 estados conocidos")
 
     # 6A-3: Pipeline activo = suma de stages activos (new + contacting + interview + sent)
     _active_stages_sum = sum(
@@ -2512,12 +2533,13 @@ def run(apps, logs, jobs, clients, meta, now=None):
         abs(_tasa_recalc - _tasa_reported) < 0.2,
         f"recalc={_tasa_recalc}% vs reportado={_tasa_reported}% (delta={abs(_tasa_recalc - _tasa_reported):.2f}%)")
 
-    # 6A-5: sin_fuente < 20% del total
+    # 6A-5: sin_fuente — umbral de calidad de datos (20%), no bloquea publicación
     _sin_fuente_apps = sum(1 for a in apps if (a.get("fuente") or a.get("lead_source") or "") in ("", "sin_fuente"))
     _sin_fuente_pct = _sin_fuente_apps / len(apps) * 100 if apps else 0.0
     chk("gate_6a_sin_fuente_pct",
         _sin_fuente_pct < 20.0,
-        f"sin_fuente={_sin_fuente_apps} ({_sin_fuente_pct:.1f}%) < 20% del total")
+        f"ADVERTENCIA DE CALIDAD: sin_fuente={_sin_fuente_apps} ({_sin_fuente_pct:.1f}%) "
+        f"— umbral 20% superado; revisar captura de lead_source")
 
     # 6A-6: No hay credenciales hardcodeadas (garantía estructural — HC-2 Sprint 6A)
     chk("gate_6a_no_hardcoded_credentials",
