@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-23T21:49:21Z",
+    "generated_at": "2026-11-23T22:03:15Z",
     "timezone": "UTC",
     "schema_version": "4.2.0",
     "data_range": {
@@ -9,7 +9,7 @@
     },
     "source_counts": {
       "applications": 928,
-      "activity_logs": 2722,
+      "activity_logs": 2725,
       "jobs": 73,
       "clients": 31,
       "meta_ad_daily": 188
@@ -26,12 +26,12 @@
     "working_stage_total": 395,
     "ingresos_con_fecha_total": 422,
     "kpis_conversion": {
-      "presentados_cliente_total": 688,
-      "pending_decision_sent": 132,
+      "presentados_cliente_total": 689,
+      "pending_decision_sent": 133,
       "presentados_finalizados": 556,
-      "tasa_presentacion_pct": 74.1,
+      "tasa_presentacion_pct": 74.2,
       "incorporados_total": 395,
-      "tasa_incorporacion_pct": 57.4,
+      "tasa_incorporacion_pct": 57.3,
       "tasa_incorporacion_finalizada_pct": 71.0,
       "nota_metodologia": "Presentados = snapshot etapa_actual in {sent,working,not_arriving,not_selected}. NO es conteo histórico de eventos de entrega — usa etapa actual como proxy. tasa_incorporacion incluye 'sent' pendientes; tasa_incorporacion_finalizada los excluye.",
       "nota_cobertura_stage_history": "stage_history cubre ~75.7% de apps. 3 apps están en etapas activas pero previamente pasaron por 'sent' (no contadas — impacto negligible)."
@@ -43,7 +43,7 @@
         "ingresos_con_fecha": 5,
         "not_selected": 0,
         "not_arriving": 0,
-        "sin_owner": 2,
+        "sin_owner": 1,
         "sin_fuente": 33,
         "sin_job": 0
       },
@@ -53,18 +53,18 @@
         "ingresos_con_fecha": 43,
         "not_selected": 4,
         "not_arriving": 1,
-        "sin_owner": 15,
+        "sin_owner": 14,
         "sin_fuente": 94,
         "sin_job": 0
       },
       "60d": {
-        "nuevos_aplicantes": 231,
+        "nuevos_aplicantes": 230,
         "pipeline_activo": 369,
         "ingresos_con_fecha": 67,
         "not_selected": 5,
         "not_arriving": 10,
-        "sin_owner": 20,
-        "sin_fuente": 142,
+        "sin_owner": 19,
+        "sin_fuente": 141,
         "sin_job": 0
       },
       "90d": {
@@ -73,7 +73,7 @@
         "ingresos_con_fecha": 92,
         "not_selected": 7,
         "not_arriving": 10,
-        "sin_owner": 21,
+        "sin_owner": 20,
         "sin_fuente": 172,
         "sin_job": 0
       },
@@ -83,7 +83,7 @@
         "ingresos_con_fecha": 422,
         "not_selected": 78,
         "not_arriving": 83,
-        "sin_owner": 21,
+        "sin_owner": 20,
         "sin_fuente": 192,
         "sin_job": 2
       }
@@ -96,8 +96,8 @@
     "A_minus_B_working_sin_fecha": 3,
     "B_minus_A_fecha_sin_working": 30,
     "B_minus_A_por_stage": {
-      "sent": 17,
-      "not_arriving": 13
+      "not_arriving": 13,
+      "sent": 17
     },
     "fechas_futuras_excluidas": 1,
     "nota": "A∩B son placements confirmados con fecha. A-B son working sin fecha de inicio (no se puede asignar a período). B-A son inconsistencias de calidad: tienen fecha de inicio pero stage incorrecto."
@@ -882,23 +882,23 @@
     "nota": "Funnel reconstruido desde activity_logs (stage_change events). started_working_at se usa para la llegada a 'working' cuando está disponible. Etapas legacy (selected, rejected) están mapeadas en calidad_datos.",
     "stage_mapping": {
       "activo": [
-        "contacting",
+        "interview",
         "new",
         "sent",
-        "interview"
+        "contacting"
       ],
       "positivo": [
         "working"
       ],
       "negativo": [
-        "not_arriving",
-        "not_selected"
+        "not_selected",
+        "not_arriving"
       ],
       "legacy": [
         "selected",
+        "reviewing",
         "rejected",
-        "in_process",
-        "reviewing"
+        "in_process"
       ]
     },
     "transiciones": [
@@ -1009,13 +1009,13 @@
         "nota": "139 candidatos excluidos — creados hace <30 días."
       },
       "60d": {
-        "valor": 44.0,
-        "numerador": 307,
-        "denominador": 697,
-        "too_recent": 231,
+        "valor": 44.1,
+        "numerador": 308,
+        "denominador": 698,
+        "too_recent": 230,
         "sin_created_at": 0,
         "label": "Tasa de Colocación a 60 Días",
-        "nota": "231 candidatos excluidos — creados hace <60 días."
+        "nota": "230 candidatos excluidos — creados hace <60 días."
       }
     },
     "por_cohorte": [
@@ -1401,11 +1401,11 @@
           },
           "60d": {
             "label": "Conversión 60 días",
-            "eligible": 87,
-            "too_recent": 20,
-            "convertidos": 16,
-            "tasa": 18.4,
-            "nota": "20 candidatos excluidos — ventana de 60d aún abierta"
+            "eligible": 88,
+            "too_recent": 19,
+            "convertidos": 17,
+            "tasa": 19.3,
+            "nota": "19 candidatos excluidos — ventana de 60d aún abierta"
           }
         }
       },
@@ -1494,10 +1494,10 @@
     "total_working": 395,
     "total_cerrado_negativo": 161,
     "por_stage": {
-      "contacting": 3,
-      "new": 133,
-      "sent": 132,
       "interview": 101,
+      "new": 132,
+      "sent": 133,
+      "contacting": 3,
       "working": 395,
       "not_selected": 78,
       "not_arriving": 83,
@@ -1511,7 +1511,7 @@
       },
       "280fbee7-41ac-4c64-9820-bc587bcc47c6": {
         "nombre_display": "Sofia",
-        "activo": 149,
+        "activo": 150,
         "working": 36
       },
       "188d78c7-17f4-49a0-acda-96e79277bd84": {
@@ -1580,9 +1580,9 @@
       },
       "280fbee7-41ac-4c64-9820-bc587bcc47c6": {
         "nombre_display": "Sofia",
-        "activo_total": 149,
+        "activo_total": 150,
         "estancado_30d": 123,
-        "pct_estancado": 82.6
+        "pct_estancado": 82.0
       },
       "188d78c7-17f4-49a0-acda-96e79277bd84": {
         "nombre_display": "Natallia",
@@ -1674,16 +1674,16 @@
       "roster_actual": true,
       "incorporacion": "2026-03-01",
       "primera_actividad": "2026-03-01",
-      "ultima_actividad": "2026-11-20",
-      "cartera_total": 222,
-      "pipeline_activo": 149,
+      "ultima_actividad": "2026-11-23",
+      "cartera_total": 223,
+      "pipeline_activo": 150,
       "working_asignado": 36,
       "not_selected": 28,
       "not_arriving": 9,
       "periodo_30d": {
-        "apps_tocadas": 43,
+        "apps_tocadas": 44,
         "cambios_stage": 0,
-        "total_acciones": 63,
+        "total_acciones": 66,
         "entrevistas_30d": 0,
         "enviados_30d": 0,
         "ingresos_30d": 10
@@ -1703,7 +1703,7 @@
           "nota": null
         },
         "mediana_dias_hasta_ingreso": 7,
-        "not_arriving_rate": 4.1
+        "not_arriving_rate": 4.0
       }
     },
     "188d78c7-17f4-49a0-acda-96e79277bd84": {
@@ -1955,9 +1955,9 @@
   "clientes": {
     "nota": "applications.client_id = 0% cobertura. Vinculación via sent_to (texto libre). Solo variantes de alta confianza fueron normalizadas. Fill Rate NO calculado — sin Headcount solicitado confiable.",
     "cobertura": {
-      "apps_con_cliente": 603,
-      "apps_sin_cliente": 325,
-      "pct_cobertura": 65.0
+      "apps_con_cliente": 604,
+      "apps_sin_cliente": 324,
+      "pct_cobertura": 65.1
     },
     "normalizacion": {
       "variantes_mapeadas": {
@@ -2005,11 +2005,11 @@
         "variantes_raw": [
           "KALAHARI OHIO"
         ],
-        "total": 60,
-        "ultimos_30d": 6,
-        "ultimos_60d": 11,
-        "ultimos_90d": 16,
-        "activos": 14,
+        "total": 61,
+        "ultimos_30d": 7,
+        "ultimos_60d": 12,
+        "ultimos_90d": 17,
+        "activos": 15,
         "working": 40,
         "not_arriving": 4,
         "not_selected": 2,
@@ -2954,7 +2954,7 @@
   },
   "jerarquia": {
     "nota": "Relación cliente→vacante reconstruida por aplicante (sent_to × job_id). Un aplicante puede vincularse a múltiples clientes. Cobertura: apps con sent_to definido.",
-    "apps_con_cliente_vinculado": 603,
+    "apps_con_cliente_vinculado": 604,
     "por_cliente": [
       {
         "cliente": "GREATWOLF THE LODGE PA",
@@ -3157,8 +3157,8 @@
       {
         "cliente": "KALAHARI OHIO",
         "vacantes_count": 6,
-        "total": 60,
-        "activos": 14,
+        "total": 61,
+        "activos": 15,
         "working": 40,
         "not_arriving": 4,
         "not_selected": 2,
@@ -3179,8 +3179,8 @@
             "titulo": "HOUSEKEEPING ROOM ATTENDANT",
             "ciudad": "Sandusky",
             "estado": "Ohio",
-            "total": 22,
-            "activos": 5,
+            "total": 23,
+            "activos": 6,
             "working": 17,
             "not_arriving": 0,
             "not_selected": 0
@@ -4612,11 +4612,11 @@
     "nota": "Productividad y eficiencia por reclutadora y fuente de captación.",
     "kpis_conversion": {
       "total_aplicantes": 928,
-      "presentados_cliente_total": 688,
-      "pending_decision_sent": 132,
-      "tasa_presentacion_pct": 74.1,
+      "presentados_cliente_total": 689,
+      "pending_decision_sent": 133,
+      "tasa_presentacion_pct": 74.2,
       "incorporados_total": 395,
-      "tasa_incorporacion_pct": 57.4,
+      "tasa_incorporacion_pct": 57.3,
       "tasa_incorporacion_finalizada_pct": 71.0
     },
     "matriz_fuente_reclutadora": {
@@ -4657,8 +4657,8 @@
             "Dora": 19,
             "Natallia": 10,
             "Sidivan": 42,
-            "Sin asignar": 32,
-            "Sofia": 81
+            "Sin asignar": 31,
+            "Sofia": 82
           }
         },
         {
@@ -15858,11 +15858,11 @@
         "fi": null
       },
       {
-        "e": "new",
-        "c": null,
+        "e": "sent",
+        "c": "KALAHARI OHIO",
         "st": "Ohio",
         "ci": "Sandusky",
-        "r": null,
+        "r": "Sofia",
         "f": "sin_fuente",
         "vt": "HOUSEKEEPING ROOM ATTENDANT",
         "vi": "ca7edbea-4900-4851-8d45-cf34ae28e6c1",
@@ -16251,8 +16251,8 @@
         "label": "Sin fuente de captación",
         "total": 158,
         "por_reclutadora": {
-          "Sofia": 69,
-          "Sin asignar": 29,
+          "Sofia": 70,
+          "Sin asignar": 28,
           "Sidivan": 24,
           "Dora": 18,
           "Natallia": 10,
@@ -16292,7 +16292,7 @@
         "total_base": 928,
         "severidad": "critica",
         "metric_impact": "started_working_at existe pero pipeline_stage ≠ working — inconsistencia",
-        "nota": "Por stage actual: {'sent': 17, 'not_arriving': 13}"
+        "nota": "Por stage actual: {'not_arriving': 13, 'sent': 17}"
       },
       {
         "issue": "fechas_futuras",
@@ -16327,8 +16327,8 @@
       {
         "issue": "sin_owner",
         "label": "Sin reclutadora asignada",
-        "count": 21,
-        "pct": 2.3,
+        "count": 20,
+        "pct": 2.2,
         "total_base": 928,
         "severidad": "alta",
         "metric_impact": "Candidatos no asignados a reclutadora",
@@ -16444,7 +16444,7 @@
       {
         "check": "pipeline_activo_solo_stages_activos",
         "passed": true,
-        "nota": "active_apps solo contiene stages: {'contacting', 'new', 'sent', 'interview'}"
+        "nota": "active_apps solo contiene stages: {'interview', 'new', 'sent', 'contacting'}"
       },
       {
         "check": "historico_no_mezclado_con_periodo",
@@ -16594,22 +16594,22 @@
       {
         "check": "gate_4a_entregados_formula",
         "passed": true,
-        "nota": "entregados=688 == sent+working+not_arr+not_sel=688"
+        "nota": "entregados=689 == sent+working+not_arr+not_sel=689"
       },
       {
         "check": "gate_4a_entregados_lte_total",
         "passed": true,
-        "nota": "entregados=688 <= total=928"
+        "nota": "entregados=689 <= total=928"
       },
       {
         "check": "gate_4a_incorporados_lte_entregados",
         "passed": true,
-        "nota": "incorporados=395 <= entregados=688"
+        "nota": "incorporados=395 <= entregados=689"
       },
       {
         "check": "gate_4a_tasa_entrega_valid",
         "passed": true,
-        "nota": "tasa_entrega=74.1"
+        "nota": "tasa_entrega=74.2"
       },
       {
         "check": "gate_4a_geo_state_sum",
@@ -16639,7 +16639,7 @@
       {
         "check": "gate_4b_tasa_finalizada_gte_base",
         "passed": true,
-        "nota": "tasa_inc_finalizada=71.0 >= tasa_inc_base=57.4"
+        "nota": "tasa_inc_finalizada=71.0 >= tasa_inc_base=57.3"
       },
       {
         "check": "gate_4b_meta_atrib_por_vacante",
@@ -16649,7 +16649,7 @@
       {
         "check": "gate_4b_pending_sent_eq_stage",
         "passed": true,
-        "nota": "pending_decision_sent=132 == stage_sent_count=132"
+        "nota": "pending_decision_sent=133 == stage_sent_count=133"
       },
       {
         "check": "gate_4b_schema_version",
@@ -16684,7 +16684,7 @@
       {
         "check": "gate_eligible_60_lte_30",
         "passed": true,
-        "nota": "eligible_60d=697 <= eligible_30d=789"
+        "nota": "eligible_60d=698 <= eligible_30d=789"
       },
       {
         "check": "gate_eligible_30_lte_14",
@@ -16759,7 +16759,7 @@
       {
         "check": "gate_6a_tasa_colocacion_formula",
         "passed": true,
-        "nota": "recalc=57.4% vs reportado=57.4% (delta=0.00%)"
+        "nota": "recalc=57.3% vs reportado=57.3% (delta=0.00%)"
       },
       {
         "check": "gate_6a_sin_fuente_pct",
